@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frontier Models. Flat Rate. Zero Tokens. — OpenClaw</title>
+<meta name="description" content="DeepSeek V4 Pro + Claude Opus + GPT-5.5. $97/month. No multipliers. No meters. No math. The same frontier models, one flat price.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0a;--surface:#111;--surface2:#1a1a1a;--border:#222;--text:#e5e5e5;--text2:#999;--accent:#7c3aed;--accent2:#a78bfa;--green:#22c55e;--red:#ef4444;--yellow:#eab308;--max-w:900px}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+a{color:var(--accent2);text-decoration:none}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 24px}
+
+/* Hero */
+.hero{padding:80px 0 60px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(ellipse at 50% 0%,rgba(124,58,237,.12) 0%,transparent 60%);pointer-events:none}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;line-height:1.15;margin-bottom:20px;letter-spacing:-.02em}
+.hero h1 span{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero .sub{font-size:clamp(1.05rem,2vw,1.25rem);color:var(--text2);max-width:700px;margin:0 auto 32px;line-height:1.6}
+.badge{display:inline-block;background:rgba(124,58,237,.15);color:var(--accent2);padding:6px 16px;border-radius:999px;font-size:.85rem;font-weight:600;margin-bottom:16px;border:1px solid rgba(124,58,237,.3)}
+.cta-primary{display:inline-block;background:var(--accent);color:#fff;padding:16px 40px;border-radius:12px;font-size:1.1rem;font-weight:700;text-decoration:none;transition:all .2s;margin:8px}
+.cta-primary:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:0 8px 32px rgba(124,58,237,.35)}
+.cta-secondary{display:inline-block;border:2px solid var(--border);color:var(--text);padding:14px 32px;border-radius:12px;font-size:1rem;font-weight:600;text-decoration:none;transition:all .2s;margin:8px}
+.cta-secondary:hover{border-color:var(--accent);color:var(--accent2)}
+
+/* Alert Banner */
+.alert{background:rgba(234,179,8,.08);border:1px solid rgba(234,179,8,.2);border-radius:12px;padding:20px 28px;margin:40px auto;max-width:var(--max-w)}
+.alert h3{color:var(--yellow);font-size:1rem;margin-bottom:8px}
+.alert p{color:var(--text2);font-size:.95rem}
+
+/* Social Proof */
+.proof{padding:40px 0}
+.proof-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:24px}
+.proof-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px}
+.proof-card .source{color:var(--accent2);font-size:.85rem;font-weight:600}
+.proof-card .quote{font-size:.95rem;margin-top:8px}
+.proof-card .pattern{color:var(--text2);font-size:.8rem;margin-top:8px}
+
+/* Comparison */
+.comparison{padding:60px 0}
+.comparison h2{text-align:center;font-size:clamp(1.5rem,3vw,2rem);margin-bottom:32px}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.95rem}
+th,td{padding:14px 18px;text-align:left;border-bottom:1px solid var(--border)}
+th{color:var(--text2);font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:.05em}
+tr:hover{background:var(--surface)}
+.yes{color:var(--green);font-weight:700}
+.no{color:var(--red)}
+.highlight{color:var(--accent2);font-weight:700}
+
+/* Problem */
+.problem{padding:60px 0}
+.problem h2{text-align:center;font-size:clamp(1.5rem,3vw,2rem);margin-bottom:32px}
+.timeline{max-width:700px;margin:0 auto}
+.timeline-item{display:flex;gap:20px;margin-bottom:28px;align-items:flex-start}
+.timeline-dot{width:12px;height:12px;border-radius:50%;background:var(--red);flex-shrink:0;margin-top:6px}
+.timeline-content h4{font-size:1rem;margin-bottom:4px}
+.timeline-content p{color:var(--text2);font-size:.9rem}
+
+/* Solution */
+.solution{padding:60px 0;text-align:center;background:var(--surface);border-radius:24px;margin:20px}
+.solution h2{font-size:clamp(1.5rem,3vw,2rem);margin-bottom:20px}
+.solution .price{font-size:clamp(3rem,6vw,4.5rem);font-weight:900;background:linear-gradient(135deg,var(--green),#4ade80);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:20px 0 8px}
+.solution .price-sub{color:var(--text2);font-size:1.1rem;margin-bottom:32px}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:800px;margin:0 auto 40px;text-align:left}
+.feature{padding:20px;background:var(--surface2);border-radius:12px;border:1px solid var(--border)}
+.feature h4{color:var(--accent2);font-size:.95rem;margin-bottom:6px}
+.feature p{color:var(--text2);font-size:.9rem}
+
+/* Honesty Test */
+.honesty{padding:60px 0;text-align:center}
+.honesty h2{font-size:clamp(1.5rem,3vw,2rem);margin-bottom:32px}
+.honesty-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:800px;margin:0 auto}
+.honesty-card{padding:24px;border-radius:12px;text-align:left}
+.honesty-card.bad{background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2)}
+.honesty-card.good{background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.2)}
+.honesty-card h4{margin-bottom:8px;font-size:1rem}
+.honesty-card p{color:var(--text2);font-size:.9rem}
+.honesty-card code{background:var(--surface2);padding:2px 8px;border-radius:4px;font-size:.85rem}
+
+/* CTA */
+.final-cta{padding:80px 0;text-align:center}
+.final-cta h2{font-size:clamp(1.5rem,3vw,2rem);margin-bottom:16px}
+.final-cta p{color:var(--text2);max-width:600px;margin:0 auto 32px;font-size:1.05rem}
+.stats{display:flex;justify-content:center;gap:40px;margin-bottom:40px;flex-wrap:wrap}
+.stat{text-align:center}
+.stat .num{font-size:1.8rem;font-weight:800;color:var(--accent2)}
+.stat .label{color:var(--text2);font-size:.85rem}
+
+/* Footer */
+footer{padding:40px 0;border-top:1px solid var(--border);text-align:center;color:var(--text2);font-size:.85rem}
+footer a{color:var(--text2);margin:0 8px}
+
+/* Mobile */
+@media(max-width:640px){
+  .hero{padding:50px 0 40px}
+  .stats{gap:20px}
+  .solution{margin:10px;padding:40px 20px;border-radius:16px}
+  table{font-size:.8rem}
+  th,td{padding:10px 12px}
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container">
+    <div class="badge">🚨 Copilot Opus 4.7 multiplier just doubled to 15x</div>
+    <h1>Your AI bill just <span>doubled overnight</span>.<br>Ours didn't change.</h1>
+    <p class="sub">GitHub Copilot Opus 4.7 went from 7.5× to 15×. DeepSeek V4 Pro (1.6T params) just integrated with OpenClaw. Same frontier power. <strong>$97/month.</strong> No multipliers. No meters. No math.</p>
+    <div>
+      <a href="https://github.com/openclaw/openclaw" class="cta-primary">Get OpenClaw — Free to Start →</a>
+      <a href="https://maltbae.github.io/ai-cost-calculator/" class="cta-secondary">See the Cost Calculator</a>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="alert">
+    <h3>⏰ Refund Deadline: May 20</h3>
+    <p>Copilot cancellation is <strong>irreversible</strong> — if you cancel, you can <strong>never resubscribe</strong>. New sign-ups are frozen indefinitely. You have until May 20 to request a refund. After that, you're locked in at token billing rates starting June 1.</p>
+  </div>
+</section>
+
+<section class="proof container">
+  <h2 style="text-align:center;font-size:clamp(1.3rem,2.5vw,1.8rem)">The Evidence Is Public</h2>
+  <div class="proof-grid">
+    <div class="proof-card">
+      <div class="source">GitHub Community #192963</div>
+      <div class="quote">"$200 Max subscription tokens would cost $4,000/month"</div>
+      <div class="pattern">Pattern #160</div>
+    </div>
+    <div class="proof-card">
+      <div class="source">GitHub Changelog — May 1</div>
+      <div class="quote">Opus 4.7 multiplier: 7.5× → 15× overnight</div>
+      <div class="pattern">Pattern #170</div>
+    </div>
+    <div class="proof-card">
+      <div class="source">Yahoo Finance</div>
+      <div class="quote">"Anthropic doubled cost estimate to $13/dev/day"</div>
+      <div class="pattern">Pattern #159</div>
+    </div>
+    <div class="proof-card">
+      <div class="source">Mashable</div>
+      <div class="quote">"DeepSeek V4 seamlessly integrated with OpenClaw"</div>
+      <div class="pattern">Pattern #172</div>
+    </div>
+    <div class="proof-card">
+      <div class="source">GlobalData / Verdict</div>
+      <div class="quote">"Half-baked moves hinder adoption, trust, and confidence"</div>
+      <div class="pattern">Pattern #165</div>
+    </div>
+    <div class="proof-card">
+      <div class="source">DeepSeek API Docs</div>
+      <div class="quote">Dedicated OpenClaw integration page at api-docs.deepseek.com</div>
+      <div class="pattern">Pattern #172</div>
+    </div>
+  </div>
+</section>
+
+<section class="comparison container">
+  <h2>The Comparison Is <span style="color:var(--green)">Not Close</span></h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Feature</th><th class="highlight">OpenClaw</th><th>Copilot</th><th>Claude Code</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Pricing</td><td class="yes">$97/month flat</td><td class="no">Token-based (June 1)</td><td class="no">$6–13/day</td></tr>
+        <tr><td>Models</td><td class="yes">14+ incl. DeepSeek V4, Opus, GPT-5.5</td><td>Copilot models only</td><td>Claude only</td></tr>
+        <tr><td>Model switching</td><td class="yes">Instant, free</td><td class="no">N/A</td><td class="no">N/A</td></tr>
+        <tr><td>Billing surprises</td><td class="yes">$0 (no meter exists)</td><td class="no">15× multipliers</td><td class="no">$13/day estimate</td></tr>
+        <tr><td>Cost tracking</td><td class="yes">Not needed</td><td class="no">Preview bill MIA (Day 18+)</td><td class="no">Hidden from subscribers</td></tr>
+        <tr><td>Lock-in</td><td class="yes">Zero — open source</td><td class="no">Cancellation irreversible</td><td class="no">Tier eviction tests</td></tr>
+        <tr><td>Multi-model routing</td><td class="yes">✅ Automatic</td><td class="no">❌</td><td class="no">❌</td></tr>
+        <tr><td>Skills marketplace</td><td class="yes">ClawHub (4,000+)</td><td>Limited</td><td>Claude Code Skills</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="problem container">
+  <h2>What Happened <span style="color:var(--red)">This Week</span></h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h4>April 30 — Promo pricing ends</h4>
+        <p>Copilot Opus 4.7 multiplier doubles from 7.5× to 15×. Overnight. No warning. No downgrade path.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h4>May 1 — Preview bill still missing</h4>
+        <p>"Coming in early May" — Day 18+ and counting. Users can't see what they're spending. By design.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h4>May 1 — Irreversible cancellation confirmed</h4>
+        <p>If you cancel Copilot now, you can <strong>never resubscribe</strong>. New sign-ups are frozen. Annual plans retired after June 1.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h4>May 1 — DeepSeek V4 Pro integrates with OpenClaw</h4>
+        <p>1.6 trillion parameters. 85% cheaper than GPT-5.5. Dedicated documentation page. Step-by-step setup.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="solution container">
+  <h2>The Alternative That <span style="background:linear-gradient(135deg,var(--green),#4ade80);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Doesn't Punish You</span></h2>
+  <div class="price">$97<span style="font-size:.4em;color:var(--text2)">/month</span></div>
+  <div class="price-sub">Every frontier model. Zero token anxiety.</div>
+  <div class="feature-grid">
+    <div class="feature">
+      <h4>🧠 14+ Frontier Models</h4>
+      <p>DeepSeek V4 Pro, Claude Opus, GPT-5.5, and more — one price covers all.</p>
+    </div>
+    <div class="feature">
+      <h4>🔄 Auto Routing</h4>
+      <p>Automatically selects the best model for each task. No manual switching.</p>
+    </div>
+    <div class="feature">
+      <h4>🔓 Open Source</h4>
+      <p>310K stars. 58K forks. Zero lock-in. Your tools, your way.</p>
+    </div>
+    <div class="feature">
+      <h4>📦 4,000+ Skills</h4>
+      <p>ClawHub marketplace with skills for every workflow and platform.</p>
+    </div>
+  </div>
+  <a href="https://github.com/openclaw/openclaw" class="cta-primary">Start for free — No credit card →</a>
+</section>
+
+<section class="honesty container">
+  <h2>The Honesty Test</h2>
+  <div class="honesty-grid">
+    <div class="honesty-card bad">
+      <h4>❌ Copilot</h4>
+      <p>Preview bill "coming early May" — Day 18+ and still not live. Users fly blind.</p>
+    </div>
+    <div class="honesty-card bad">
+      <h4>❌ Claude Code</h4>
+      <p>Cost tracking hidden from subscribers. <code>if (isSubscriber) return false</code>. They built it, then hid it.</p>
+    </div>
+    <div class="honesty-card good">
+      <h4>✅ OpenClaw</h4>
+      <p>Nothing to track. $97/month. No meter exists. <strong>We don't have a meter to hide.</strong></p>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container">
+    <h2>Stop doing math to write code.</h2>
+    <p>310K stars. 58K forks. 4,000+ skills. Open source. Frontier models at a flat rate. The way it should be.</p>
+    <div class="stats">
+      <div class="stat"><div class="num">310K</div><div class="label">GitHub Stars</div></div>
+      <div class="stat"><div class="num">14+</div><div class="label">Frontier Models</div></div>
+      <div class="stat"><div class="num">$0</div><div class="label">Token Anxiety</div></div>
+    </div>
+    <a href="https://github.com/openclaw/openclaw" class="cta-primary">Get OpenClaw →</a>
+    <br><br>
+    <a href="https://maltbae.github.io/ai-cost-calculator/" class="cta-secondary">Compare Costs with Our Calculator →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>
+      <a href="https://github.com/openclaw/openclaw">GitHub</a> ·
+      <a href="https://docs.openclaw.ai">Docs</a> ·
+      <a href="https://clawhub.ai">ClawHub</a> ·
+      <a href="https://discord.com/invite/clawd">Discord</a>
+    </p>
+    <p style="margin-top:12px">Based on 172 documented pricing patterns. Data sourced from GitHub Community, Yahoo Finance, Mashable, GlobalData, and public changelogs.</p>
+    <p style="margin-top:8px">© 2026 OpenClaw · Open source under MIT license</p>
+  </div>
+</footer>
+
+</body>
+</html>
