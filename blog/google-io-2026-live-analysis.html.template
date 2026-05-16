@@ -43,7 +43,7 @@
   }
   </script>
 
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="style.css">
   <style>
     .proof-grid {
       display: grid;
@@ -60,13 +60,13 @@
     .proof-card h3 {
       font-size: 1rem;
       margin: 0 0 8px 0;
-      color: var(--purple);
+      color: var(--accent);
     }
     .proof-card p {
       font-size: 0.9rem;
       margin: 0;
       line-height: 1.5;
-      color: var(--text-secondary);
+      color: var(--text-muted);
     }
     .proof-card .tag {
       display: inline-block;
@@ -78,11 +78,11 @@
       border-radius: 4px;
       margin-bottom: 8px;
     }
-    .tag-rent { background: #fef2f2; color: #dc2626; }
-    .tag-own { background: #f0fdf4; color: #16a34a; }
-    .tag-verified { background: #eff6ff; color: #2563eb; }
+    .tag-rent { background: rgba(239,68,68,.1); color: #ef4444; }
+    .tag-own { background: rgba(34,197,94,.1); color: #22c55e; }
+    .tag-verified { background: rgba(59,130,246,.1); color: #3b82f6; }
     .live-banner {
-      background: linear-gradient(135deg, var(--purple), #9333ea);
+      background: linear-gradient(135deg, var(--accent), #9333ea);
       color: white;
       text-align: center;
       padding: 12px 20px;
@@ -92,7 +92,7 @@
       font-size: 0.95rem;
     }
     .announcement-block {
-      border-left: 3px solid var(--purple);
+      border-left: 3px solid var(--accent);
       padding: 16px 20px;
       margin: 20px 0;
       background: var(--surface);
@@ -100,7 +100,7 @@
     }
     .announcement-block h3 {
       margin: 0 0 8px 0;
-      color: var(--purple);
+      color: var(--accent);
     }
     .announcement-block p {
       margin: 0;
@@ -124,15 +124,15 @@
     .score-item .number {
       font-size: 2rem;
       font-weight: 700;
-      color: var(--purple);
+      color: var(--accent);
     }
     .score-item .label {
       font-size: 0.8rem;
-      color: var(--text-secondary);
+      color: var(--text-muted);
       margin-top: 4px;
     }
     .cta-box {
-      background: linear-gradient(135deg, var(--purple), #9333ea);
+      background: linear-gradient(135deg, var(--accent), #9333ea);
       color: white;
       border-radius: 12px;
       padding: 32px;
@@ -153,7 +153,7 @@
     .cta-box .btn {
       display: inline-block;
       background: white;
-      color: var(--purple);
+      color: var(--accent);
       padding: 12px 32px;
       border-radius: 8px;
       text-decoration: none;
@@ -171,16 +171,17 @@
     }
     .timestamp {
       font-size: 0.8rem;
-      color: var(--text-secondary);
+      color: var(--text-muted);
       font-style: italic;
     }
   </style>
 </head>
 <body>
-  <nav class="navbar">
+  <nav>
     <div class="container">
-      <a href="../" class="logo">Frontier at Flat Rate</a>
-      <a href="../blog/" class="nav-link">Blog</a>
+      <span class="brand">Frontier at Flat Rate</span>
+      <a href="index.html">← Blog</a>
+      <a href="../">Home</a>
     </div>
   </nav>
 
@@ -296,9 +297,9 @@
     </article>
   </main>
 
-  <footer class="footer">
+  <footer>
     <div class="container">
-      <p>&copy; 2026 Frontier at Flat Rate. Your AI, your rules.</p>
+      <p>&copy; 2026 Frontier at Flat Rate. Own your AI.</p>
     </div>
   </footer>
 </body>
