@@ -7,8 +7,8 @@
   --border: #262626;
   --text: #e5e5e5;
   --text-muted: #737373;
-  --accent: #3b82f6;
-  --accent-hover: #2563eb;
+  --accent: #7c3aed;
+  --accent-hover: #a78bfa;
   --max-width: 720px;
 }
 
@@ -50,16 +50,22 @@ nav .brand {
 nav a { font-size: 0.9rem; }
 
 /* Blog listing */
-.post-list { list-style: none; }
-.post-item {
+.post-list, .post-listing { list-style: none; }
+.post-item,
+.post-listing {
   padding: 24px 0;
   border-bottom: 1px solid var(--border);
 }
-.post-item:first-child { padding-top: 0; }
-.post-item h2 { font-size: 1.3rem; margin-bottom: 8px; }
-.post-item h2 a { color: var(--text); }
-.post-item h2 a:hover { color: var(--accent); }
-.post-meta {
+.post-item:first-child,
+.post-listing:first-child { padding-top: 0; }
+.post-item h2,
+.post-listing h2 { font-size: 1.3rem; margin-bottom: 8px; }
+.post-item h2 a,
+.post-listing h2 a { color: var(--text); }
+.post-item h2 a:hover,
+.post-listing h2 a:hover { color: var(--accent); }
+.post-meta,
+.post-date {
   font-size: 0.85rem;
   color: var(--text-muted);
   margin-bottom: 8px;
