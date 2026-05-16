@@ -295,6 +295,26 @@
       </div>
 
     </article>
+
+      <!-- CTA FOOTER — Revenue Conversion Architecture (Marcus HB870, dark-theme adapted Vira HB768) -->
+      <div style="margin-top:3rem;padding:2rem;border-top:2px solid var(--accent, #7c3aed);border-radius:8px;background:var(--surface, #141414)">
+        <h3 style="color:var(--accent, #7c3aed);margin-bottom:1rem">Stop renting your AI. Start owning it.</h3>
+        <p style="margin-bottom:1.5rem;color:var(--text-muted, #737373)">Every cloud AI tool can change pricing overnight, throttle your usage, or lock you out. OpenClaw runs locally. Your tools, your data, your terms.</p>
+        <div style="display:flex;flex-direction:column;gap:0.75rem">
+          <a href="https://maltbae.github.io/frontier-flat-rate/?utm_source=blog&utm_medium=cta-footer&utm_campaign=flat-rate"
+             style="display:inline-block;padding:0.75rem 1.5rem;background:var(--accent, #7c3aed);color:#fff;text-decoration:none;border-radius:6px;font-weight:600;text-align:center">
+            → See flat-rate pricing — no tokens, no surprises
+          </a>
+          <a href="https://gist.github.com/maltbae/a6aa5ea0cd4ee6225094d6b70c98da91?utm_source=blog&utm_medium=cta-footer&utm_campaign=compare"
+             style="display:inline-block;padding:0.5rem 1rem;border:1px solid var(--accent, #7c3aed);color:var(--accent, #7c3aed);text-decoration:none;border-radius:6px;text-align:center">
+            → Compare billing models side-by-side (15+ tools)
+          </a>
+          <a href="https://github.com/maltbae?tab=gists"
+             style="display:inline-block;padding:0.5rem 1rem;color:var(--text-muted, #737373);text-decoration:none;text-align:center;font-size:0.9rem">
+            → Read 30+ free AI pricing &amp; sovereignty analyses
+          </a>
+        </div>
+      </div>
   </main>
 
   <footer>
