@@ -56,5 +56,23 @@ jsonld=$(curl -s "$BASE/blog/google-io-own-vs-rent.html" 2>/dev/null | grep -c '
 [ "$jsonld" -gt 0 ] && { echo "✅ JSON-LD present"; ((PASSED++)) || true; } || { echo "❌ JSON-LD missing"; ((FAILED++)) || true; }
 
 echo ""
+
+# Content hash checks (SI #68 — verify committed content is actually served)
+echo "--- Content Verification ---"
+for check in "sessionStorage:Analytics tracker:blog/index.html" "canonical:Canonical URL:blog/google-io-own-vs-rent.html" "canonical:Canonical URL:blog/gmail-5gb-own-vs-rent.html"; do
+  needle="${check%%:*}"
+  label="${check#*:}"; label="${label%%:*}"
+  page="${check##*:}"
+  count=$(curl -s "$BASE/$page" 2>/dev/null | grep -c "$needle" || echo "0")
+  if [ "$count" -gt 0 ]; then
+    echo "✅ $label present in $page"
+    ((PASSED++)) || true
+  else
+    echo "⚠️  $label NOT found in $page (may need rebuild time)"
+    ((FAILED++)) || true
+  fi
+done
+
+echo ""
 echo "=== Results: $PASSED passed, $FAILED failed ==="
 [ "$FAILED" -eq 0 ] && echo "🟢 BLOG IS LIVE AND HEALTHY" || echo "🔴 ISSUES DETECTED — investigate"
