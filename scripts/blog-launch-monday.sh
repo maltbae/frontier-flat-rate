@@ -41,9 +41,30 @@ if [ "$DIRTY" -gt 0 ]; then
   git stash
 fi
 
-# Push to origin
-echo "Pushing to origin/main..."
+# Sync gh-pages with main (GitHub Pages deploys from gh-pages, NOT main)
+echo "Syncing gh-pages with main..."
+git checkout gh-pages
+git merge main --ff-only
+
+# Push BOTH branches (main for source, gh-pages for deployment)
+echo "Pushing gh-pages (deployment branch)..."
+git push origin gh-pages
+echo "Pushing main (source branch)..."
 git push origin main
+
+# Switch back to main for normal work
+git checkout main
+
+# Verify deployment
+echo "Waiting 30s for GitHub Pages build..."
+sleep 30
+echo "Verifying blog is live..."
+HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" https://maltbae.github.io/frontier-flat-rate/blog/)
+if [ "$HTTP_STATUS" = "200" ]; then
+  echo "✅ Blog LIVE! HTTP 200 confirmed."
+else
+  echo "⚠️ Blog returned HTTP $HTTP_STATUS. May need a few more minutes for Pages build."
+fi
 
 echo "✅ Blog pushed! Live at: https://maltbae.github.io/frontier-flat-rate/blog/"
 echo ""
