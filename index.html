@@ -21,6 +21,8 @@ a{color:var(--accent2);text-decoration:none}
 .badge{display:inline-block;background:rgba(124,58,237,.15);color:var(--accent2);padding:6px 16px;border-radius:999px;font-size:.85rem;font-weight:600;margin-bottom:16px;border:1px solid rgba(124,58,237,.3)}
 .cta-primary{display:inline-block;background:var(--accent);color:#fff;padding:16px 40px;border-radius:12px;font-size:1.1rem;font-weight:700;text-decoration:none;transition:all .2s;margin:8px}
 .cta-primary:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:0 8px 32px rgba(124,58,237,.35)}
+.cta-buy{display:inline-block;background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;padding:18px 48px;border-radius:14px;font-size:1.2rem;font-weight:800;text-decoration:none;transition:all .2s;margin:8px;box-shadow:0 4px 20px rgba(34,197,94,.3)}
+.cta-buy:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(34,197,94,.45);background:linear-gradient(135deg,#16a34a,#15803d)}
 .cta-secondary{display:inline-block;border:2px solid var(--border);color:var(--text);padding:14px 32px;border-radius:12px;font-size:1rem;font-weight:600;text-decoration:none;transition:all .2s;margin:8px}
 .cta-secondary:hover{border-color:var(--accent);color:var(--accent2)}
 
@@ -110,8 +112,9 @@ footer a{color:var(--text2);margin:0 8px}
     <h1>Your AI bill just <span>doubled overnight</span>.<br>Ours didn't change.</h1>
     <p class="sub">GitHub Copilot Opus 4.7 went from 7.5× to 15×. DeepSeek V4 Pro (1.6T params) just integrated with OpenClaw. Same frontier power. <strong>$97/month.</strong> No multipliers. No meters. No math.</p>
     <div>
-      <a href="https://github.com/openclaw/openclaw" class="cta-primary">Get OpenClaw — Free to Start →</a>
-      <a href="https://maltbae.github.io/ai-cost-calculator/" class="cta-secondary">See the Cost Calculator</a>
+      <!-- PAYMENT_URL: Replace #checkout with your Gumroad/Stripe payment link (30 sec Angel action) -->
+      <a href="#checkout" class="cta-buy">Start for $97/month →</a>
+      <a href="https://github.com/openclaw/openclaw" class="cta-secondary">Get OpenClaw — Free to Start</a>
     </div>
   </div>
 </section>
@@ -266,9 +269,12 @@ footer a{color:var(--text2);margin:0 8px}
       <div class="stat"><div class="num">14+</div><div class="label">Frontier Models</div></div>
       <div class="stat"><div class="num">$0</div><div class="label">Token Anxiety</div></div>
     </div>
-    <a href="https://github.com/openclaw/openclaw" class="cta-primary">Get OpenClaw →</a>
+    <!-- PAYMENT_URL: Replace #checkout with your Gumroad/Stripe payment link -->
+    <a href="#checkout" class="cta-buy">Start for $97/month →</a>
     <br><br>
-    <a href="https://maltbae.github.io/ai-cost-calculator/" class="cta-secondary">Compare Costs with Our Calculator →</a>
+    <a href="https://github.com/openclaw/openclaw" class="cta-secondary">Get OpenClaw — Free (GitHub)</a>
+    ·
+    <a href="https://maltbae.github.io/ai-cost-calculator/" class="cta-secondary">Cost Calculator</a>
   </div>
 </section>
 
