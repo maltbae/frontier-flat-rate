@@ -4,10 +4,17 @@
 # Prerequisites: blog/ directory with index.html + 2 posts committed
 set -euo pipefail
 
+# Safety: --dry-run exits after verification without pushing
+DRY_RUN=false
+if [[ "${1:-}" == "--dry-run" ]]; then
+  DRY_RUN=true
+  echo "=== Blog Launch Script (DRY RUN — no push) ==="
+else
+  echo "=== Blog Launch Script ==="
+fi
+
 REPO_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$REPO_DIR"
-
-echo "=== Blog Launch Script ==="
 echo "Repo: $REPO_DIR"
 echo "Time: $(date -u '+%Y-%m-%d %H:%M UTC')"
 
@@ -39,6 +46,14 @@ DIRTY=$(git status --porcelain | wc -l | tr -d ' ')
 if [ "$DIRTY" -gt 0 ]; then
   echo "WARNING: $DIRTY uncommitted changes. Stashing..."
   git stash
+fi
+
+if [ "$DRY_RUN" = true ]; then
+  echo ""
+  echo "=== DRY RUN COMPLETE ==="
+  echo "No changes pushed. All verifications passed."
+  echo "Run without --dry-run to execute the launch."
+  exit 0
 fi
 
 # Sync gh-pages with main (GitHub Pages deploys from gh-pages, NOT main)
