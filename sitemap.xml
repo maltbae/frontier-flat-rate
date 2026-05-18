@@ -3,12 +3,14 @@
   <url>
     <loc>https://maltbae.github.io/frontier-flat-rate/</loc>
     <priority>1.0</priority>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://maltbae.github.io/frontier-flat-rate/blog/</loc>
     <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://maltbae.github.io/frontier-flat-rate/blog/google-io-own-vs-rent.html</loc>
