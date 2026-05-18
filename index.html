@@ -103,6 +103,19 @@ footer a{color:var(--text2);margin:0 8px}
   th,td{padding:10px 12px}
 }
 </style>
+<!-- Analytics: lightweight pageview tracker (privacy-friendly, no cookies) -->
+<script>
+(function(){
+  var k='ffa_pv',s=sessionStorage,d=JSON.parse(s.getItem(k)||'{}'),
+      p=location.pathname,t=new Date().toISOString();
+  d[p]=(d[p]||0)+1;d[p+'_last']=t;
+  s.setItem(k,JSON.stringify(d));
+  if(navigator.sendBeacon){
+    var m={page:p,time:t,ref:document.referrer||'direct'};
+    console.log('[FFR Analytics]',JSON.stringify(m));
+  }
+})();
+</script>
 </head>
 <body>
 
