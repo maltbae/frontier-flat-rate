@@ -28,12 +28,13 @@ check_url "$BASE/" "Main site" 200
 check_url "$BASE/blog/" "Blog index" 200
 check_url "$BASE/blog/google-io-own-vs-rent.html" "Post 1 (Google I/O)" 200
 check_url "$BASE/blog/gmail-5gb-own-vs-rent.html" "Post 2 (Gmail 5GB)" 200
+check_url "$BASE/blog/google-io-2026-live-analysis.html" "Post 3 (Live Analysis)" 200
 check_url "$BASE/blog/style.css" "Blog CSS" 200
 
 echo ""
 
 # Content size checks
-for page in "blog/index.html" "blog/google-io-own-vs-rent.html" "blog/gmail-5gb-own-vs-rent.html"; do
+for page in "blog/index.html" "blog/google-io-own-vs-rent.html" "blog/gmail-5gb-own-vs-rent.html" "blog/google-io-2026-live-analysis.html"; do
   size=$(curl -s "$BASE/$page" 2>/dev/null | wc -c | tr -d ' ')
   if [ "$size" -gt 1000 ]; then
     echo "✅ $page: ${size} bytes"
