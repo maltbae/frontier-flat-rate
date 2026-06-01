@@ -134,6 +134,41 @@ footer {
   .cta-box a { padding: 10px 20px; font-size: 0.9rem; }
 }
 
+/* Proof cards */
+.proof-card {
+  border-left: 3px solid var(--accent);
+  background: var(--surface);
+  padding: 16px 20px;
+  margin: 24px 0;
+  border-radius: 0 8px 8px 0;
+}
+.proof-card strong {
+  display: block;
+  margin-bottom: 4px;
+}
+.proof-card.tier-1 {
+  border-left-color: #f59e0b;
+}
+.proof-card.tier-2 {
+  border-left-color: var(--accent);
+}
+
+/* CTA footer */
+.cta-footer {
+  margin-top: 48px;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-align: center;
+}
+.cta-footer p {
+  margin-bottom: 8px;
+}
+.cta-footer a {
+  font-weight: 600;
+}
+
 /* Prevent table overflow on small screens */
 table {
   display: block;
