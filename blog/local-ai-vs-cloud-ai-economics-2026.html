@@ -135,6 +135,39 @@
       margin: 16px 0 8px;
     }
   </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is local AI cheaper than cloud AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Local AI has a higher upfront hardware cost ($1,000-3,000 for a capable GPU) but zero ongoing per-token charges. Cloud AI costs $20-250/month per tool and increases with usage. For developers using AI more than 20 hours/week, local AI typically breaks even in 6-12 months."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What hardware do I need to run local AI models?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To run capable local AI models like Llama 3, DeepSeek, or Mistral, you need a GPU with at least 8GB VRAM (NVIDIA RTX 3060 or better). For larger models, 16-24GB VRAM is recommended (RTX 4090, Mac M-series with 32GB+ unified memory)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use both local and cloud AI together?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A hybrid approach is increasingly popular — use local AI for routine tasks (code completion, simple queries) and cloud AI for complex reasoning. Tools like OpenClaw support routing between local and cloud models based on task complexity."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
   <nav>

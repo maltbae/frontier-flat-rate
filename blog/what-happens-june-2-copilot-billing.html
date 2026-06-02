@@ -56,6 +56,39 @@
     .tag { display: inline-block; background: #c084fc33; color: #6b21a8; padding: 2px 10px; border-radius: 12px; font-size: 0.85em; font-weight: 500; }
     @media (max-width: 600px) { body { padding: 12px; } h1 { font-size: 1.5em; } table { font-size: 0.85em; } td, th { padding: 8px; } }
   </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What changed with GitHub Copilot billing on June 2, 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On June 1, 2026, GitHub Copilot switched from per-seat pricing to token-based billing. Your first token bill appeared around June 2, reflecting actual AI model usage. Many developers saw costs increase 9x to 60x compared to the previous flat rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is my Copilot bill so much higher?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Copilot now charges per token for AI model usage. Longer conversations, code reviews, and agent mode consume more tokens. Auto Mode silently selects expensive models — some tasks cost 840 credits versus 161 credits for the same work, a 5.2x variance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I get a refund for Copilot token billing charges?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GitHub removed the refund window on May 20, 2026 — 11 days before the billing switch. Annual plans were retired. Sign-ups for individual plans were paused. The promotional credits expire September 2026, after which costs increase another 61-64%."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
