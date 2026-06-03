@@ -192,4 +192,9 @@
     <changefreq>daily</changefeq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://maltbae.github.io/frontier-flat-rate/blog/they-changed-the-contract-annual-copilot-multiplier-stealth.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
