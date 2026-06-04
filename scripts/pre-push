@@ -3,7 +3,7 @@
 # Prevents KL#913 index drift from reaching production
 # Install: cp scripts/pre-push .git/hooks/pre-push && chmod +x .git/hooks/pre-push
 
-REPO_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+REPO_DIR="$(cd "$(dirname "$0")/../.." && pwd)"
 
 # Only run if blog/ has changes in this push
 while read -r local_ref local_sha remote_ref remote_sha; do
