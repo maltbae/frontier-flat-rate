@@ -189,7 +189,7 @@
   </url>
   <url>
     <loc>https://maltbae.github.io/frontier-flat-rate/blog/atom.xml</loc>
-    <changefreq>daily</changefeq>
+    <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
@@ -197,4 +197,28 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://maltbae.github.io/frontier-flat-rate/blog/ai-billing-designed-to-obfuscate-june-2026.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://maltbae.github.io/frontier-flat-rate/blog/the-productivity-tax-when-your-best-day-costs-most.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://maltbae.github.io/frontier-flat-rate/blog/three-billing-changes-five-months.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://maltbae.github.io/frontier-flat-rate/blog/when-the-floor-disappears-safety-net-removal-june-2026.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
 </urlset>

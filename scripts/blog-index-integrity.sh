@@ -123,6 +123,37 @@ if [[ $BROKEN_EXTERNAL_COUNT -gt 0 ]]; then
     [[ $EXIT_CODE -lt 2 ]] && EXIT_CODE=2
 fi
 
+# --- Sitemap completeness check ---
+SITEMAP_FILE="$REPO_DIR/sitemap.xml"
+if [[ -f "$SITEMAP_FILE" ]]; then
+    SITEMAP_POSTS=$(grep -o 'blog/[^<]*\.html' "$SITEMAP_FILE" | sed 's|^blog/||' | sort -u)
+    SITEMAP_COUNT=$(echo "$SITEMAP_POSTS" | grep -c . || true)
+    SITEMAP_MISSING=$(comm -23 <(echo "$FILES_ON_DISK") <(echo "$SITEMAP_POSTS") || true)
+    SITEMAP_MISSING_COUNT=$(echo "$SITEMAP_MISSING" | grep -c . || true)
+
+    echo "   Sitemap entries: $SITEMAP_COUNT/$DISK_COUNT"
+    echo ""
+
+    if [[ $SITEMAP_MISSING_COUNT -gt 0 ]]; then
+        echo "⚠️  MISSING FROM SITEMAP (live but invisible to search engines):"
+        echo "$SITEMAP_MISSING" | while read -r f; do
+            [[ -n "$f" ]] && echo "   $f"
+        done
+        echo ""
+
+        if $FIX_MODE; then
+            echo "🔧 FIX: Add missing posts to sitemap.xml:"
+            echo "$SITEMAP_MISSING" | while read -r missing; do
+                [[ -z "$missing" ]] && continue
+                echo "   <url><loc>https://maltbae.github.io/frontier-flat-rate/blog/$missing</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>"
+            done
+        fi
+        [[ $EXIT_CODE -lt 1 ]] && EXIT_CODE=1
+    fi
+else
+    echo "⚠️  No sitemap.xml found at $SITEMAP_FILE"
+fi
+
 if [[ $EXIT_CODE -eq 0 ]]; then
     echo "✅ Blog index integrity: CLEAN ($DISK_COUNT posts, zero drift)"
 fi
