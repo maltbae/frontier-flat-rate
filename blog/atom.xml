@@ -4,7 +4,7 @@
   <link href="https://maltbae.github.io/frontier-flat-rate/blog" rel="alternate" type="text/html"/>
   <link href="https://maltbae.github.io/frontier-flat-rate/blog/atom.xml" rel="self" type="application/atom+xml"/>
   <id>https://maltbae.github.io/frontier-flat-rate/blog</id>
-  <updated>2026-06-03T01:49:45.294420+00:00</updated>
+  <updated>2026-06-04T07:08:42.773099+00:00</updated>
   <subtitle>AI subscription costs are spiraling. Flat-rate tools let you own your AI instead of renting it. Proof points, guides, and exit strategies.</subtitle>
   <entry>
     <title>Your Copilot Budget Is a 3-Month Illusion</title>
@@ -12,6 +12,41 @@
     <id>https://maltbae.github.io/frontier-flat-rate/blog/copilot-enterprise-promotional-cliff-september-2026.html</id>
     <updated>2026-06-04T00:00:00+00:00</updated>
     <summary>GitHub's promotional credits expire September 2026. Business users lose 61% of credits. Enterprise loses 64%. No annual lock-in available. Your real costs start in 3 months.</summary>
+  </entry>
+  <entry>
+    <title>AI Billing Was Designed to Obfuscate — And June 15 Proves It</title>
+    <link href="https://maltbae.github.io/frontier-flat-rate/blog/ai-billing-designed-to-obfuscate-june-2026.html" rel="alternate" type="text/html"/>
+    <id>https://maltbae.github.io/frontier-flat-rate/blog/ai-billing-designed-to-obfuscate-june-2026.html</id>
+    <updated>2026-06-03T00:00:00+00:00</updated>
+    <summary>PCMag reports AI subscription pricing was 'heavily subsidized to encourage adoption and obfuscate the financial costs.' The subsidy era ends June 15. Here's what it means for developers.</summary>
+  </entry>
+  <entry>
+    <title>The Productivity Tax When Your Best Day Costs Most</title>
+    <link href="https://maltbae.github.io/frontier-flat-rate/blog/the-productivity-tax-when-your-best-day-costs-most.html" rel="alternate" type="text/html"/>
+    <id>https://maltbae.github.io/frontier-flat-rate/blog/the-productivity-tax-when-your-best-day-costs-most.html</id>
+    <updated>2026-06-03T00:00:00+00:00</updated>
+    <summary>Metered AI billing means your most productive day is your most expensive day. The harder you work, the more you pay. That's not a feature — it's a tax on ambition.</summary>
+  </entry>
+  <entry>
+    <title>Three Billing Changes Five Months</title>
+    <link href="https://maltbae.github.io/frontier-flat-rate/blog/three-billing-changes-five-months.html" rel="alternate" type="text/html"/>
+    <id>https://maltbae.github.io/frontier-flat-rate/blog/three-billing-changes-five-months.html</id>
+    <updated>2026-06-03T00:00:00+00:00</updated>
+    <summary>Anthropic changed billing four times in five months. GitHub Copilot switched to tokens overnight. When vendors rework your bill this often, who's really in control of your costs?</summary>
+  </entry>
+  <entry>
+    <title>When The Floor Disappears Safety Net Removal June 2026</title>
+    <link href="https://maltbae.github.io/frontier-flat-rate/blog/when-the-floor-disappears-safety-net-removal-june-2026.html" rel="alternate" type="text/html"/>
+    <id>https://maltbae.github.io/frontier-flat-rate/blog/when-the-floor-disappears-safety-net-removal-june-2026.html</id>
+    <updated>2026-06-03T00:00:00+00:00</updated>
+    <summary>Three AI vendors independently converged on the same pattern: remove the fallback, make safety nets opt-in, then make them disappear entirely. Here's what it means for your AI bill.</summary>
+  </entry>
+  <entry>
+    <title>They Changed the Contract: Annual Copilot Users Hit With Stealth Multiplier Increases</title>
+    <link href="https://maltbae.github.io/frontier-flat-rate/blog/they-changed-the-contract-annual-copilot-multiplier-stealth.html" rel="alternate" type="text/html"/>
+    <id>https://maltbae.github.io/frontier-flat-rate/blog/they-changed-the-contract-annual-copilot-multiplier-stealth.html</id>
+    <updated>2026-06-02T00:00:00+00:00</updated>
+    <summary>GitHub quietly changed model multipliers on annual Copilot subscribers on June 1. Claude Opus went from 7.5x to 27x. Your contract didn't change — what it buys did.</summary>
   </entry>
   <entry>
     <title>The AI Rent Receipt: What You Actually Spend on AI Subscriptions in 2026</title>
@@ -145,40 +180,5 @@
     <id>https://maltbae.github.io/frontier-flat-rate/blog/flat-rate-ai-vs-token-billing-2026.html</id>
     <updated>2026-05-27T00:00:00+00:00</updated>
     <summary>Token billing, per-seat licensing, usage tiers — AI pricing is fracturing into two models. Here's what each one actually costs, which vendors use which, and why flat-rate AI is the missing middle developers have been waiting for.</summary>
-  </entry>
-  <entry>
-    <title>When Does Local AI Beat Cloud AI? The 2026 Break-Even</title>
-    <link href="https://maltbae.github.io/frontier-flat-rate/blog/local-ai-vs-cloud-ai-economics-2026.html" rel="alternate" type="text/html"/>
-    <id>https://maltbae.github.io/frontier-flat-rate/blog/local-ai-vs-cloud-ai-economics-2026.html</id>
-    <updated>2026-05-27T00:00:00+00:00</updated>
-    <summary>Outsourcing plus local AI is now more economical than frontier lab APIs for most developer workflows. Here's the math, the break-even points, and when owning your AI infrastructure beats renting it.</summary>
-  </entry>
-  <entry>
-    <title>Copilot Token Billing Starts June 1: Here's What Your Bill Will Actually Look Like</title>
-    <link href="https://maltbae.github.io/frontier-flat-rate/blog/copilot-token-billing-june-2026.html" rel="alternate" type="text/html"/>
-    <id>https://maltbae.github.io/frontier-flat-rate/blog/copilot-token-billing-june-2026.html</id>
-    <updated>2026-05-24T00:00:00+00:00</updated>
-    <summary>GitHub Copilot adds per-operation token billing on June 1, 2026. Here's what your bill will actually look like — and why the pattern is bigger than one tool.</summary>
-  </entry>
-  <entry>
-    <title>What Happens Monday June 2: Your First Copilot Token Bill</title>
-    <link href="https://maltbae.github.io/frontier-flat-rate/blog/what-happens-june-2-copilot-billing.html" rel="alternate" type="text/html"/>
-    <id>https://maltbae.github.io/frontier-flat-rate/blog/what-happens-june-2-copilot-billing.html</id>
-    <updated>2026-05-24T00:00:00+00:00</updated>
-    <summary>June 2 is the first business day under Copilot token billing. Here's what developers will see, what it means, and why this pattern matters for every AI tool you use.</summary>
-  </entry>
-  <entry>
-    <title>Your AI Just Got 10GB Smaller</title>
-    <link href="https://maltbae.github.io/frontier-flat-rate/blog/gmail-5gb-own-vs-rent.html" rel="alternate" type="text/html"/>
-    <id>https://maltbae.github.io/frontier-flat-rate/blog/gmail-5gb-own-vs-rent.html</id>
-    <updated>2026-05-21T00:00:00+00:00</updated>
-    <summary>Google quietly cut Gmail free storage from 15GB to 5GB. No announcement. No email. Just a support page edit. Here's what it means for your AI agent.</summary>
-  </entry>
-  <entry>
-    <title>Google I/O 2026 Is Over: The Definitive Own vs Rent Scorecard</title>
-    <link href="https://maltbae.github.io/frontier-flat-rate/blog/google-io-2025-post-synthesis-own-vs-rent.html" rel="alternate" type="text/html"/>
-    <id>https://maltbae.github.io/frontier-flat-rate/blog/google-io-2025-post-synthesis-own-vs-rent.html</id>
-    <updated>2026-05-20T00:00:00+00:00</updated>
-    <summary>Post-I/O 2026 synthesis: every announcement, every hidden cost, and why owning your AI agent is the only rational move for solopreneurs after Google's agent blitz.</summary>
   </entry>
 </feed>
