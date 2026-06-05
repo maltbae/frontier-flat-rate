@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The $2 Student Who Proved AI Billing Is Broken — GitHub Copilot Token Billing</title>
+    <link rel="canonical" href="https://maltbae.github.io/frontier-flat-rate/blog/the-student-who-proved-ai-billing-broken-june-2026.html">
+    <meta name="description" content="A CS student burned through 200 Copilot credits in one morning — 10 to 20 requests. Whether you pay $2 or $100,000, rent is rent. 12 days until Anthropic changes your AI bill on June 15.">
+    <meta property="og:title" content="The $2 Student Who Proved AI Billing Is Broken">
+    <meta property="og:description" content="A student exhausted 200 Copilot credits in one morning. Enterprise pays $100K for the same meter. Rent is rent. 12 days until Anthropic changes your bill.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://maltbae.github.io/frontier-flat-rate/blog/the-student-who-proved-ai-billing-broken-june-2026.html">
+    <link rel="stylesheet" href="/frontier-flat-rate/blog/style.css">
+    <style>
+        .proof-card { background: #f3e8ff; border-left: 4px solid #7c3aed; padding: 16px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        .proof-card.tier-0 { background: #fef2f2; border-left-color: #dc2626; }
+        .proof-card.tier-1 { background: #fff7ed; border-left-color: #ea580c; }
+        .proof-card h4 { margin: 0 0 8px 0; color: #1e1b4b; font-size: 1.05em; }
+        .proof-card .source { font-size: 0.85em; color: #6b7280; }
+        .stat-highlight { background: #7c3aed; color: white; padding: 2px 8px; border-radius: 4px; font-weight: 600; }
+        .number-block { text-align: center; padding: 24px; margin: 20px 0; background: linear-gradient(135deg, #1e1b4b, #312e81); border-radius: 12px; color: white; }
+        .number-block .big { font-size: 3em; font-weight: 800; }
+        .number-block .label { font-size: 1.1em; opacity: 0.9; }
+        .comparison-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95em; }
+        .comparison-table th { background: #1e1b4b; color: white; padding: 12px 16px; text-align: left; }
+        .comparison-table td { padding: 10px 16px; border-bottom: 1px solid #e5e7eb; }
+        .comparison-table tr:nth-child(even) { background: #f9fafb; }
+        .comparison-table .highlight-row { background: #fef2f2; font-weight: 600; }
+        .comparison-table .student-row { background: #fef3c7; font-weight: 600; }
+        blockquote { border-left: 3px solid #7c3aed; padding-left: 16px; margin: 20px 0; color: #4c1d95; font-style: italic; }
+        .countdown-box { background: linear-gradient(135deg, #dc2626, #991b1b); color: white; padding: 24px; border-radius: 12px; text-align: center; margin: 32px 0; }
+        .countdown-box .days { font-size: 2.5em; font-weight: 800; }
+        .cta-box { background: linear-gradient(135deg, #7c3aed, #4f46e5); color: white; padding: 24px; border-radius: 12px; text-align: center; margin: 32px 0; }
+        .cta-box a { color: #fbbf24; font-weight: 700; text-decoration: underline; font-size: 1.1em; }
+        .spectrum-bar { display: flex; border-radius: 8px; overflow: hidden; margin: 20px 0; height: 48px; }
+        .spectrum-bar > div { display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 0.9em; }
+        .spectrum-label { text-align: center; font-size: 0.9em; color: #6b7280; margin-top: 4px; }
+        @media (max-width: 640px) { .number-block .big { font-size: 2.2em; } .comparison-table { font-size: 0.85em; } .comparison-table th, .comparison-table td { padding: 8px; } .spectrum-bar { height: 36px; font-size: 0.8em; } }
+    </style>
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The $2 Student Who Proved AI Billing Is Broken — GitHub Copilot Token Billing",
+    "description": "A CS student burned through 200 Copilot credits in one morning — 10 to 20 requests. Whether you pay $2 or $100,000, rent is rent. 12 days until Anthropic changes your AI bill on June 15.",
+    "datePublished": "2026-06-01",
+    "dateModified": "2026-06-01",
+    "author": {
+      "@type": "Person",
+      "name": "Angel"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Frontier at Flat Rate",
+      "url": "https://maltbae.github.io/frontier-flat-rate/"
+    },
+    "mainEntityOfPage": "https://maltbae.github.io/frontier-flat-rate/blog/the-student-who-proved-ai-billing-broken-june-2026.html"
+  }
+  </script>
+<script src="/frontier-flat-rate/scripts/analytics.js"></script>
+</head>
+<body>
+    <header>
+        <nav><a href="/frontier-flat-rate/blog/">← Back to Blog</a></nav>
+    </header>
+    <article>
+        <h1>The $2 Student Who Proved AI Billing Is Broken</h1>
+        <p class="post-date">June 3, 2026 · 5 min read</p>
+
+        <div class="number-block">
+            <div class="big">200 Credits</div>
+            <div class="label">A student's entire monthly Copilot allocation — gone in one morning of homework</div>
+        </div>
+
+        <p>Yesterday, a computer science student opened GitHub Copilot to finish a homework assignment. By lunch, their monthly credits were gone. <strong>Two hundred credits. Ten to twenty requests. One morning of work.</strong></p>
+
+        <p>That student isn't an edge case. They're the canary.</p>
+
+        <div class="countdown-box">
+            <div class="days">⏱ 12 Days</div>
+            <div class="label">Until Anthropic splits your credits on June 15</div>
+        </div>
+
+        <h2>The Spectrum of Extraction</h2>
+
+        <p>This week, developers across <em>every</em> tier discovered the same thing: the meter spins the same direction regardless of what you pay.</p>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Tier</th>
+                    <th>Monthly Cost</th>
+                    <th>Credits</th>
+                    <th>What Happened</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="student-row">
+                    <td><strong>Student</strong></td>
+                    <td>Included</td>
+                    <td>200</td>
+                    <td><strong>Exhausted Day 1</strong> (10-20 requests)</td>
+                </tr>
+                <tr>
+                    <td><strong>Pro</strong></td>
+                    <td>$10/mo</td>
+                    <td>1,000</td>
+                    <td>~2-3 days of normal use</td>
+                </tr>
+                <tr>
+                    <td><strong>Pro+</strong></td>
+                    <td>$39/mo</td>
+                    <td>7,000</td>
+                    <td>8% gone in 2 hours</td>
+                </tr>
+                <tr class="highlight-row">
+                    <td><strong>Enterprise</strong></td>
+                    <td>Custom</td>
+                    <td>Custom</td>
+                    <td>Reports of $500-$3,000/mo</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>The student paid nothing and got 200 credits. The enterprise pays thousands and gets a meter that spins the same direction.</p>
+
+        <blockquote>
+            <strong>Rent is rent</strong> — whether you're a student burning $2 or a company burning $100,000.
+        </blockquote>
+
+        <div class="proof-card tier-1">
+            <h4>🎓 Student Plan: 200 Credits, Gone in One Morning</h4>
+            <p>Ars Technica quantified the real per-request cost: <strong>15 to 5,000 credits</strong>, depending on which model the system silently selects for you. A student with 200 credits can make <strong>at most 13 simple requests</strong> — or as few as <strong>4 complex ones</strong> — before the month's allocation is gone.</p>
+            <p class="source">Source: Ars Technica (June 2, 2026), gHacks (June 2, 2026)</p>
+        </div>
+
+        <h2>Why Students Matter More Than Enterprises</h2>
+
+        <p>When GitHub squeezes a student, that student has <strong>zero lock-in</strong>. No enterprise contract. No procurement cycle. No SSO integration holding them hostage. They just... leave.</p>
+
+        <p>And they tell everyone in their Discord, their Slack, their classroom, their hackathon team. Students have <strong>5-10x the word-of-mouth velocity</strong> of enterprise buyers. The student you squeeze today becomes the senior engineer who remembers — and the CTO who chooses your competitor in three years.</p>
+
+        <p>This isn't speculation. The migration has already started:</p>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Credit Policy</th>
+                    <th>The Difference</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>GitHub Copilot</strong></td>
+                    <td>Monthly expiry</td>
+                    <td>Use it or lose it</td>
+                </tr>
+                <tr>
+                    <td><strong>OpenRouter</strong></td>
+                    <td>Annual rollover</td>
+                    <td>Credits last up to a year</td>
+                </tr>
+                <tr class="highlight-row">
+                    <td><strong>Twin Agent</strong></td>
+                    <td>No credits</td>
+                    <td>$47 once. No meter at all.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>The 7-Step Subscription Trap</h2>
+
+        <p>GitHub showed us the playbook this week. Here's how it works:</p>
+
+        <ol>
+            <li><strong>Hook</strong> — Free tier with generous allocation</li>
+            <li><strong>Lock-in</strong> — Integrate into workflow (VS Code, IDE extensions)</li>
+            <li><strong>Close exits</strong> — Pause sign-ups, make cancellations irreversible</li>
+            <li><strong>Switch to metered</strong> — Replace flat rate with token billing</li>
+            <li><strong>Remove safety net</strong> — Eliminate free model fallback</li>
+            <li><strong>Blame the user</strong> — "You should monitor your usage more carefully"</li>
+            <li><strong>Squeeze every tier</strong> — Student to enterprise, all at once</li>
+        </ol>
+
+        <div class="proof-card tier-1">
+            <h4>🔒 Step 7: Squeeze Every Tier Simultaneously</h4>
+            <p>GitHub Community Discussion #192948 confirms the squeeze hits all segments at once:</p>
+            <ul>
+                <li><strong>Students:</strong> 200 credits → exhausted Day 1</li>
+                <li><strong>Pros:</strong> 1,000 credits → "impossible to predict" per-request cost</li>
+                <li><strong>Pro+:</strong> 7,000 credits → 8% gone in 2 hours, Claude 4.8 = 1,180 credits for "mediocre" results</li>
+                <li><strong>Enterprise:</strong> $50 → $3,000/month (60x increase reported)</li>
+            </ul>
+            <p class="source">Source: GitHub Community #192948, #197089, gHacks, Ars Technica (June 1-2, 2026)</p>
+        </div>
+
+        <h2>What Happens on June 15</h2>
+
+        <p>In 12 days, Anthropic splits credit pricing for Claude. If you use Claude through any third-party tool, your costs change. The vendor who told you "predictable pricing" last month is about to change the math.</p>
+
+        <p>GitHub showed the playbook works. Anthropic filed for IPO at a <strong>$965 billion valuation</strong> on the same day Copilot billing went live. The landlord is selling the building — and your rent is the IPO fuel.</p>
+
+        <div class="countdown-box">
+            <div class="days">⏱ 12 Days Until June 15</div>
+            <div class="label">The student proved it. The enterprise is paying for it. The landlord is selling the building.</div>
+        </div>
+
+        <h2>Your Options Before June 15</h2>
+
+        <p><strong>Option A: Stay Rented.</strong> Accept the meter. Watch your credits. Budget for unpredictability. Hope the promotional credits (expiring August 2026) get extended.</p>
+
+        <p><strong>Option B: Go Hybrid.</strong> Use your subscription until it runs out, then switch to a service with rollover credits. This is what thousands of developers are already doing this week.</p>
+
+        <p><strong>Option C: Own Your AI.</strong> One-time purchase. No credits. No tokens. No meter watching. No surprise when the next "sustainability" announcement drops.</p>
+
+        <div class="cta-box">
+            <h3>The Student Was Right. Own Your AI.</h3>
+            <p>Flat-rate AI access with no meters, no credits, no surprises.</p>
+            <p><a href="https://www.skool.com/aiac-6489">Get the AI Twin Agent Kit → $47 one-time</a></p>
+            <p style="font-size: 0.9em; opacity: 0.85;">Or explore <a href="https://maltbae.github.io/frontier-flat-rate/copilot-migration.html" style="color: #c4b5fd;">migrating from Copilot → flat-rate</a></p>
+        </div>
+
+        <p><em>Published June 3, 2026. Sources: Ars Technica, gHacks, GitHub Community Discussions #192948 and #197089, The Register, TechCrunch. Part of the <a href="/frontier-flat-rate/blog/">Countdown to June 15</a> series.</em></p>
+
+        <hr>
+        <p style="font-size: 0.85em; color: #6b7280;">
+            <strong>Related:</strong>
+            <a href="/frontier-flat-rate/blog/the-24x-hidden-price-range-copilot-auto-mode-2026.html">The 24x Hidden Price Range</a> ·
+            <a href="/frontier-flat-rate/blog/copilot-day-one-rent-arrived-june-2026.html">Copilot Day One: Rent Arrived</a> ·
+            <a href="/frontier-flat-rate/blog/the-safety-net-they-removed-copilot-june-2026.html">The Safety Net They Removed</a> ·
+            <a href="/frontier-flat-rate/blog/anthropic-june15-credit-split.html">Anthropic June 15 Credit Split</a> ·
+            <a href="/frontier-flat-rate/blog/flat-rate-ai-vs-token-billing-2026.html">Flat-Rate AI vs Token Billing</a>
+        </p>
+    <section class="related-posts">
+<h3>Related Posts</h3>
+<ul>
+  <li><a href="/frontier-flat-rate/blog/claude-opus-48-effort-tax.html">Claude Opus 4.8 and the Effort Tax: Why Your AI Vendor Controls How Hard Your AI Thinks</a> — Claude Opus 4.8 adds effort control — your vendor now decides how much thinking your AI does. Fast mode costs 3x less, p</li>
+  <li><a href="/frontier-flat-rate/blog/copilot-alternatives-2026.html">Copilot Alternatives in 2026: Flat-Rate AI Tools That Won't Surprise-Bill You</a> — GitHub Copilot token billing starts June 1, 2026. Compare 7 flat-rate AI coding alternatives — no tokens, no metering, n</li>
+  <li><a href="/frontier-flat-rate/blog/copilot-token-billing-june-2026.html">Copilot Token Billing Starts June 1: What Changes, What It Costs, and Why It Matters</a> — GitHub Copilot adds per-operation token billing on June 1, 2026. Here's what your bill will actually look like — and why</li>
+  <li><a href="/frontier-flat-rate/blog/copilot-day-one-rent-arrived-june-2026.html">Day One: The Rent Already Arrived</a> — June 1, 2026. GitHub Copilot's token billing went live today. Bills jumped 10x-50x. The safety net is gone. Two vendors,</li>
+</ul>
+</section>
+</article>
+</body>
+</html>

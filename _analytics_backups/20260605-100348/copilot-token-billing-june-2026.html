@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copilot Token Billing Starts June 1: What Changes, What It Costs, and Why It Matters — Frontier at Flat Rate</title>
+    <link rel="canonical" href="https://maltbae.github.io/frontier-flat-rate/blog/copilot-token-billing-june-2026.html">
+  <meta name="description" content="GitHub Copilot adds per-operation token billing on June 1, 2026. Here's what your bill will actually look like — and why the pattern is bigger than one tool.">
+  <meta name="keywords" content="Copilot token billing, GitHub Copilot pricing 2026, token billing June 1, AI coding cost, own vs rent, flat rate AI, Copilot alternatives">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Copilot Token Billing Starts June 1: Here's What Your Bill Will Actually Look Like">
+  <meta property="og:description" content="GitHub adds per-operation charges on top of your subscription. Microsoft just canceled Claude Code licenses internally. The pattern is clear.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://maltbae.github.io/frontier-flat-rate/blog/copilot-token-billing-june-2026.html">
+  <meta property="og:site_name" content="Frontier at Flat Rate">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Copilot Token Billing Starts June 1: What Changes and What It Costs">
+  <meta name="twitter:description" content="GitHub adds per-operation charges on top of your subscription. The math nobody's doing.">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Copilot Token Billing Starts June 1: What Changes, What It Costs, and Why It Matters",
+    "description": "GitHub Copilot adds per-operation token billing on June 1, 2026. What your bill will actually look like and why the pattern is bigger than one tool.",
+    "datePublished": "2026-05-24",
+    "dateModified": "2026-05-24",
+    "author": {
+      "@type": "Person",
+      "name": "Angel"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Frontier at Flat Rate",
+      "url": "https://maltbae.github.io/frontier-flat-rate/"
+    },
+    "keywords": ["Copilot Token Billing", "GitHub Copilot", "AI Pricing", "Token Billing", "Own vs Rent", "Flat Rate AI"],
+    "articleSection": "Own vs Rent"
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin: 24px 0;
+    }
+    .proof-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+    }
+    .proof-card h3 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: var(--accent);
+    }
+    .proof-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .cost-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.9rem;
+    }
+    .cost-table th {
+      text-align: left;
+      padding: 12px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+    .cost-table td {
+      padding: 12px;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+    .cost-table tr.total td {
+      font-weight: 700;
+      color: var(--accent);
+      border-top: 2px solid var(--accent);
+    }
+    .timeline-box {
+      background: var(--surface);
+      border-left: 3px solid var(--accent);
+      padding: 16px 20px;
+      margin: 20px 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .timeline-box strong {
+      color: var(--text);
+    }
+    .timeline-box p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-top: 6px;
+    }
+    .cta-box {
+      background: var(--surface);
+      border: 1px solid var(--accent);
+      border-radius: 8px;
+      padding: 24px;
+      margin: 32px 0;
+      text-align: center;
+    }
+    .cta-box a {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 12px;
+      transition: background 0.2s;
+    }
+    .cta-box a:hover {
+      background: var(--accent-hover);
+    }
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 32px;
+    }
+    .tag {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    .meta {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .highlight {
+      background: linear-gradient(transparent 60%, rgba(124, 58, 237, 0.15) 60%);
+      padding: 0 2px;
+    }
+  </style>
+<!-- Analytics: lightweight pageview tracker (privacy-friendly, no cookies) -->
+<script>
+(function(){
+  var k='ffa_pv',s=sessionStorage,d=JSON.parse(s.getItem(k)||'{}'),
+      p=location.pathname,t=new Date().toISOString();
+  d[p]=(d[p]||0)+1;d[p+'_last']=t;
+  s.setItem(k,JSON.stringify(d));
+  if(navigator.sendBeacon){
+    var m={page:p,time:t,ref:document.referrer||'direct'};
+    console.log('[FFR Analytics]',JSON.stringify(m));
+  }
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "When did GitHub Copilot token billing start?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GitHub Copilot token billing started June 1, 2026. All existing Copilot subscriptions were migrated to the new token-based model. Free fallback models were removed and annual plans were retired."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are Copilot tokens calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Copilot tokens are calculated based on input and output tokens processed by AI models. Different models cost different amounts — Claude Opus costs more than GPT-4o-mini. Auto Mode selects models automatically, meaning you may trigger expensive models without knowing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Copilot promotional credit cliff?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GitHub gave promotional credits to ease the transition to token billing, but these expire September 2026. Business users will lose 61% of their credits ($49→$19). Enterprise users lose 64% ($109→$39). After expiration, real costs kick in at full token rates."
+      }
+    }
+  ]
+}
+</script>
+<script src="/frontier-flat-rate/scripts/analytics.js"></script>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <span class="brand">Frontier at Flat Rate</span>
+      <a href="index.html">← Blog</a>
+      <a href="../">Home</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <article>
+      <h1>Copilot Token Billing Starts June 1: What Changes, What It Costs, and Why It Matters</h1>
+
+      <div class="meta">
+        Published May 24, 2026 · Own vs Rent series · 5 min read · <strong>8 days before token billing goes live</strong>
+      </div>
+
+      <p>On June 1, 2026, GitHub Copilot adds <strong>per-operation token billing</strong> on top of your existing subscription. You'll pay your $10–$39/month seat <em>and</em> pay for every AI operation you run.</p>
+
+      <p>Nobody seems to be doing the math on what this actually costs. So let's do it.</p>
+
+      <h2>What Changes on June 1</h2>
+
+      <div class="timeline-box">
+        <strong>Before June 1: Flat subscription.</strong>
+        <p>$10/month (Individual), $19/month (Business), or $39/month (Enterprise). Use it as much as you want. The bill is the bill.</p>
+      </div>
+
+      <div class="timeline-box">
+        <strong>After June 1: Subscription + tokens.</strong>
+        <p>Your subscription stays. But now every autocomplete, every chat, every code generation, every agentic action costs <em>additional</em> tokens. Think of it like your phone plan adding per-text charges — except you might send 1,000 texts a day without realizing it.</p>
+      </div>
+
+      <p>Here's the thing GitHub's pricing page won't show you: <strong>the token rates aren't published.</strong> As gHacks reported, "GitHub has not published per-model token rates." You won't know the price until the bill arrives.</p>
+
+      <h2>The Math: What Your Bill Could Look Like</h2>
+
+      <table class="cost-table">
+        <thead>
+          <tr><th>Component</th><th>Cost</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Base subscription</strong></td><td>$10–39/mo</td><td>Per seat, already paying</td></tr>
+          <tr><td><strong>Token charges (estimated)</strong></td><td>$50–500+/mo</td><td>Per operation, varies by model</td></tr>
+          <tr><td><strong>Annual plan multiplier</strong></td><td>3–18× increase</td><td>When your renewal hits with new billing</td></tr>
+          <tr><td><strong>Overage / credit top-ups</strong></td><td>$0–200+/mo</td><td>Credits run dry mid-month</td></tr>
+          <tr class="total"><td><strong>Estimated total</strong></td><td><strong>$60–739+/mo per developer</strong></td><td>Before you know the rates</td></tr>
+        </tbody>
+      </table>
+
+      <p>A single long coding session? That could be <strong>$20–500+ in token charges alone.</strong> A team of 10 developers? You're looking at $600–$7,390/month — for a tool that used to cost $100–390.</p>
+
+      <h2>This Isn't Just Copilot</h2>
+
+      <div class="proof-grid">
+        <div class="proof-card">
+          <h3>Claude Code: $40 plan = $14,000 usage</h3>
+          <p>A YouTube-documented case where a developer's $40/month Anthropic plan generated $14,000 in usage charges. Per-session hourly rates + token metering = a bill that scales with how much you <em>need</em> the tool, not how much you can afford it.</p>
+        </div>
+
+        <div class="proof-card">
+          <h3>Cursor: $1,400/month for internal GitHub work</h3>
+          <p>byteiota documented a $1,400/month bill for internal GitHub operations. A single 1M-token operation costs $100–500. The company just raised $2B — that money comes from somewhere.</p>
+        </div>
+
+        <div class="proof-card">
+          <h3>Microsoft canceled Claude Code internally</h3>
+          <p>The Verge reported that Microsoft canceled internal Claude Code licenses — even though engineers preferred the tool. 458 points on Hacker News, covered by Fortune. When the vendor cancels its own AI tool access, you know the pricing model is broken.</p>
+        </div>
+      </div>
+
+      <h2>The Pattern: Every Major AI Tool in 2026</h2>
+
+      <table class="cost-table">
+        <thead>
+          <tr><th>Tool</th><th>Was</th><th>Now</th><th>What Happened</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Copilot</strong></td><td>$10–39/mo flat</td><td>$60–739+/mo</td><td>Added token billing June 1</td></tr>
+          <tr><td><strong>Claude Code</strong></td><td>$20/mo (API)</td><td>$20–14,000+/mo</td><td>Usage-based with session rates</td></tr>
+          <tr><td><strong>Cursor</strong></td><td>$20/mo flat</td><td>$20–1,400+/mo</td><td>Token overages + subsidy burn</td></tr>
+          <tr><td><strong>Anthropic Agents</strong></td><td>Per-token</td><td>Token + $0.08/hr double-billing</td><td>Charging for tokens AND time</td></tr>
+          <tr><td><strong>GitLab</strong></td><td>$29–99/mo</td><td>$100s–$1000s/user/mo</td><td>CEO framed as "agentic era" norm</td></tr>
+        </tbody>
+      </table>
+
+      <p><strong>Every single major AI coding tool has moved to consumption-based pricing in 2025–2026.</strong> This is not a coincidence. It's the <span class="highlight">rent extraction pattern</span>.</p>
+
+      <p>The playbook is identical every time:</p>
+      <ol>
+        <li><strong>Introduce</strong> at a low flat rate to drive adoption</li>
+        <li><strong>Build dependency</strong> — your workflow now requires the tool</li>
+        <li><strong>Add consumption billing</strong> — now you pay for how much you use it</li>
+        <li><strong>Raise rates</strong> — annual plan renewals hit with 3–18× increases</li>
+        <li><strong>Lock in</strong> — switching costs are now too high to leave</li>
+      </ol>
+
+      <p>Copilot hitting step 3 on June 1 isn't surprising. It was inevitable. <a href="google-io-own-vs-rent.html">Google did the same thing with Gmail</a> — 15GB became 5GB, and they wanted your phone number to restore it. Same pattern. Same extraction. Different landlord.</p>
+
+      <h2>The Goodhart Problem</h2>
+
+      <p>When your AI tool charges per token, your team's incentive changes from "solve the problem" to "minimize token spend." Developers start:</p>
+      <ul>
+        <li>Writing <strong>shorter prompts</strong> to save tokens (worse results)</li>
+        <li>Avoiding <strong>iterative refinement</strong> because each iteration costs more</li>
+        <li>Choosing <strong>cheaper models</strong> over better ones</li>
+        <li>Spending mental energy on <strong>billing anxiety</strong> instead of shipping</li>
+      </ul>
+
+      <p>Hacker News commenters call it "goldilocks your token usage" and "pragmatic metrics that got Goodharted." The AI billing grief cycle goes: <strong>Enthusiasm → Anxiety → Resentment.</strong></p>
+
+      <p>Your developers didn't sign up to be token accountants. But that's what consumption billing turns them into.</p>
+
+      <h2>The Flat-Rate Alternative</h2>
+
+      <table class="cost-table">
+        <thead>
+          <tr><th></th><th>OpenClaw ($97/mo)</th><th>Copilot (post-June 1)</th><th>Claude Code</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Monthly bill</strong></td><td><strong>$97. Always.</strong></td><td>$60–739+</td><td>$20–14,000+</td></tr>
+          <tr><td><strong>Token charges</strong></td><td><strong>$0</strong></td><td>Per operation</td><td>Per token</td></tr>
+          <tr><td><strong>Bill surprises</strong></td><td><strong>Never</strong></td><td>Monthly</td><td>Monthly</td></tr>
+          <tr><td><strong>Cancel anytime</strong></td><td>Yes — keep everything</td><td>Yes — lose access</td><td>Yes — lose projects</td></tr>
+          <tr><td><strong>Data ownership</strong></td><td><strong>100% yours</strong></td><td>Microsoft's servers</td><td>Anthropic's servers</td></tr>
+        </tbody>
+      </table>
+
+      <div class="cta-box">
+        <h2>Before June 1, You Have a Choice</h2>
+        <p><strong>8 days left</strong> before Copilot token billing starts. You can wait for the first surprise bill and start optimizing tokens instead of shipping code.</p>
+        <p>Or you can <strong>own your AI agent</strong> — one flat rate, no tokens, no surprises, your data on your machine.</p>
+        <a href="https://skool.com/aiac-6489?utm_source=copilot-token-billing&utm_medium=blog-body&utm_campaign=june-1-countdown">Get the Twin Agent Kit → $47 one-time</a>
+      </div>
+
+      <p><strong>Here's what to watch for after June 1:</strong></p>
+      <ul>
+        <li>Your first Copilot bill with token charges — compare it to May's</li>
+        <li>Developer productivity conversations shifting to <em>"how do we reduce token spend?"</em></li>
+        <li>New "credit" and "allowance" features designed to make unpredictable billing feel normal</li>
+        <li>Annual renewal season — when that 3–18× multiplier hits</li>
+      </ul>
+
+      <p>The pattern is clear. The question is whether you see it before or after your first token bill.</p>
+
+      <div class="related" style="margin-top:32px; padding:20px; background:var(--surface, #111); border:1px solid var(--border, #222); border-radius:12px;">
+        <h3 style="font-size:1rem; margin-bottom:12px;">Related</h3>
+        <p><a href="google-io-own-vs-rent.html">Google I/O 2026: Why Your AI Agent Will Never Be Yours →</a> Google + OpenAI + Microsoft. Three landlords, same playbook. The Own vs Rent frame for the biggest AI event of 2026.</p>
+        <p style="margin-top:8px"><a href="gmail-5gb-own-vs-rent.html">Your AI Just Got 10GB Smaller →</a> Google quietly cut Gmail storage from 15GB to 5GB. No announcement. Same extraction pattern. Same landlord behavior.</p>
+        <p style="margin-top:8px"><a href="https://gist.github.com/maltbae/a6aa5ea0cd4ee6225094d6b70c98da91?utm_source=blog-june1&utm_medium=related&utm_campaign=compare">Compare 15+ AI billing models side-by-side →</a> The full breakdown of every major tool's pricing — and what they don't publish.</p>
+      </div>
+
+      <div class="tag-list">
+        <span class="tag">Copilot Token Billing</span>
+        <span class="tag">GitHub Copilot</span>
+        <span class="tag">June 1 2026</span>
+        <span class="tag">AI Pricing</span>
+        <span class="tag">Token Billing</span>
+        <span class="tag">Own vs Rent</span>
+        <span class="tag">Flat Rate AI</span>
+        <span class="tag">Copilot Alternatives</span>
+      </div>
+    <section class="related-posts">
+<h3>Related Posts</h3>
+<ul>
+  <li><a href="/frontier-flat-rate/blog/copilot-alternatives-2026.html">Copilot Alternatives in 2026: Flat-Rate AI Tools That Won't Surprise-Bill You</a> — GitHub Copilot token billing starts June 1, 2026. Compare 7 flat-rate AI coding alternatives — no tokens, no metering, n</li>
+  <li><a href="/frontier-flat-rate/blog/copilot-day-one-rent-arrived-june-2026.html">Day One: The Rent Already Arrived</a> — June 1, 2026. GitHub Copilot's token billing went live today. Bills jumped 10x-50x. The safety net is gone. Two vendors,</li>
+  <li><a href="/frontier-flat-rate/blog/flat-rate-ai-vs-token-billing-2026.html">Flat-Rate AI vs Token Billing: The Developer's Guide to 2026 Pricing</a> — Token billing, per-seat licensing, usage tiers — AI pricing is fracturing into two models. Here's what each one actually</li>
+  <li><a href="/frontier-flat-rate/blog/the-student-who-proved-ai-billing-broken-june-2026.html">The $2 Student Who Proved AI Billing Is Broken</a> — A CS student burned through 200 Copilot credits in one morning — 10 to 20 requests. Whether you pay $2 or $100,000, rent</li>
+
+  <li><a href="/frontier-flat-rate/blog/ai-billing-designed-to-obfuscate-june-2026.html">AI Billing Was Designed to Obfuscate — And June 15 Proves It</a> — PCMag reports AI subscription pricing was 'heavily subsidized to encourage adoption and obfuscate the financial costs.' </li>
+
+  <li><a href="/frontier-flat-rate/blog/the-productivity-tax-when-your-best-day-costs-most.html">The Productivity Tax — When Your Best Day Costs the Most</a> — Metered AI billing means your most productive day is your most expensive day. The harder you work, the more you pay. Tha</li>
+
+  <li><a href="/frontier-flat-rate/blog/they-changed-the-contract-annual-copilot-multiplier-stealth.html">They Changed the Contract: Annual Copilot Users Hit With Stealth Multiplier Increases — Frontier at Flat Rate</a> — GitHub quietly changed model multipliers on annual Copilot subscribers on June 1. Claude Opus went from 7.5x to 27x. You</li>
+
+  <li><a href="/frontier-flat-rate/blog/three-billing-changes-five-months.html">Three Billing Changes in Five Months — When Your AI Vendor Can't Stop Reworking Your Bill</a> — Anthropic changed billing four times in five months. GitHub Copilot switched to tokens overnight. When vendors rework yo</li>
+</ul>
+</section>
+</article>
+
+      <!-- CTA FOOTER — Revenue Conversion Architecture (Marcus HB870, dark-theme adapted Vira HB768) -->
+      <div style="margin-top:3rem;padding:2rem;border-top:2px solid var(--accent, #7c3aed);border-radius:8px;background:var(--surface, #141414)">
+        <h3 style="color:var(--accent, #7c3aed);margin-bottom:1rem">Stop renting your AI. Start owning it.</h3>
+        <p style="margin-bottom:1.5rem;color:var(--text-muted, #737373)">Build your own AI agent — trained on your voice, your process, your knowledge. No platform lock-in. No subscription. $47 once, forever yours.</p>
+        <div style="display:flex;flex-direction:column;gap:0.75rem">
+          <a href="https://skool.com/aiac-6489?utm_source=copilot-token-billing&utm_medium=cta-primary&utm_campaign=june-1-countdown"
+             style="display:inline-block;padding:1rem 2rem;background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;text-decoration:none;border-radius:8px;font-weight:800;text-align:center;font-size:1.1rem;box-shadow:0 4px 20px rgba(34,197,94,.3)">
+            → Build Your AI Twin Agent — $47 one-time
+          </a>
+          <a href="https://skool.com/aiac-6489?utm_source=copilot-token-billing&utm_medium=cta-footer&utm_campaign=twin-agent-kit"
+             style="display:inline-block;padding:0.75rem 1.5rem;background:var(--accent, #7c3aed);color:#fff;text-decoration:none;border-radius:6px;font-weight:600;text-align:center">
+            Get the Twin Agent Kit — $47 one-time
+          </a>
+          <a href="https://maltbae.github.io/frontier-flat-rate/?utm_source=copilot-token-billing&utm_medium=cta-footer&utm_campaign=flat-rate"
+             style="display:inline-block;padding:0.5rem 1rem;border:1px solid var(--accent, #7c3aed);color:var(--accent, #7c3aed);text-decoration:none;border-radius:6px;text-align:center">
+            → See OpenClaw flat-rate pricing — no tokens, no surprises
+          </a>
+          <a href="https://gist.github.com/maltbae/a6aa5ea0cd4ee6225094d6b70c98da91?utm_source=copilot-token-billing&utm_medium=cta-footer&utm_campaign=compare"
+             style="display:inline-block;padding:0.5rem 1rem;border:1px solid var(--accent, #7c3aed);color:var(--accent, #7c3aed);text-decoration:none;border-radius:6px;text-align:center">
+            → Compare billing models side-by-side (15+ tools)
+          </a>
+          <a href="https://gist.github.com/maltbae/fc24af3cd18e622ef0f83521c9a2ca85"
+             style="display:inline-block;padding:0.5rem 1rem;border:1px solid var(--accent, #7c3aed);color:var(--accent, #7c3aed);text-decoration:none;border-radius:6px;text-align:center">
+            → Take the Own vs Rent scorecard (10 costs, 2 min)
+          </a>
+          <a href="https://github.com/maltbae?tab=gists"
+             style="display:inline-block;padding:0.5rem 1rem;color:var(--text-muted, #737373);text-decoration:none;text-align:center;font-size:0.9rem">
+            → Read 30+ free AI pricing &amp; sovereignty analyses
+          </a>
+        </div>
+      </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Frontier at Flat Rate. Own your AI.</p>
+    </div>
+  </footer>
+</body>
+</html>
