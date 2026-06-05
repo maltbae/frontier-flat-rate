@@ -1,0 +1,56 @@
+# Auto-deploy main → gh-pages on push to main
+# Eliminates manual merge+push bottleneck (caused HB790 bug during I/O launch)
+# SI #210: Self-improvement — GitHub Actions Blog Auto-Deploy
+#
+# SETUP (one-time, 2 min):
+#   1. Copy this file to frontier-flat-rate/.github/workflows/auto-deploy.yml
+#   2. Push to main: git add .github/ && git commit -m "ci: add auto-deploy workflow" && git push origin main
+#   3. GitHub Pages must be set to serve from gh-pages branch (already configured)
+#   4. Verify: push a test commit to main, watch Actions tab for green check
+#
+# WHAT IT DOES:
+#   - Triggers on every push to main
+#   - Checks out main content
+#   - Force-pushes main's tree to gh-pages branch
+#   - Preserves git history on main; gh-pages is a mirror
+#
+# SECURITY: Uses GITHUB_TOKEN (auto-provided, no secrets needed)
+# ROLLBACK: Revert the commit on main → auto-deploys the revert
+
+name: Auto-Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Deploy to gh-pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan gh-pages-deploy
+          git add -A
+          git commit -m "auto-deploy: ${GITHUB_SHA:0:7}" --allow-empty
+          git push origin gh-pages-deploy:gh-pages --force
+
+      - name: Verify deployment
+        run: |
+          sleep 5
+          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" "https://maltbae.github.io/frontier-flat-rate/")
+          if [ "$HTTP_CODE" != "200" ]; then
+            echo "⚠️ Warning: Site returned HTTP $HTTP_CODE (GitHub Pages may need 1-2 min to rebuild)"
+          else
+            echo "✅ Site live (HTTP 200)"
+          fi
