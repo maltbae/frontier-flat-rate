@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Cliffs, One Landlord: June 15 and July 13</title>
+    <meta name="description" content="Anthropic's credit split hits June 15. The 50% limit increase expires July 13. Two pricing cliffs in 35 days. Here's what they mean for your AI tools.">
+    <meta name="author" content="The AI You Built">
+    <meta name="date" content="2026-06-06">
+    <link rel="canonical" href="https://maltbae.github.io/frontier-flat-rate/blog/two-cliffs-one-landlord-june-july-2026.html">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Two Cliffs, One Landlord: Why Anthropic Has Two Pricing Cliffs in 35 Days",
+        "datePublished": "2026-06-06",
+        "dateModified": "2026-06-06",
+        "author": {"@type": "Organization", "name": "The AI You Built"},
+        "publisher": {"@type": "Organization", "name": "The AI You Built"},
+        "description": "Anthropic's credit split hits June 15. The 50% weekly limit increase expires July 13. Two pricing cliffs in 35 days — and what they mean for anyone paying for AI.",
+        "mainEntityOfPage": "https://maltbae.github.io/frontier-flat-rate/blog/two-cliffs-one-landlord-june-july-2026.html"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What happens on June 15 with Anthropic Claude?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "On June 15, 2026, Anthropic splits Claude subscriptions into two credit pools: one for interactive usage (chat) and one for Agent SDK/programmatic usage (automations, CI pipelines, third-party tools). The programmatic pool has a hard cap. When it runs out, your agents stop until next month."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What happens on July 13 with Anthropic Claude?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "On July 13, 2026, Anthropic's temporary 50% weekly limit increase expires. This was applied after the initial billing changes in May. When it expires, weekly usage limits drop back to their lower baseline — meaning less usage per week for the same monthly price."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why are there two pricing cliffs?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The two cliffs serve different extraction mechanisms. June 15 restructures what you get (splitting one subscription into two capped pools). July 13 reduces how much you can use (removing a temporary limit increase). Together, they create a 35-day window where both interactive and programmatic AI access contract significantly."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How much more expensive will Claude become after these changes?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "It depends on your usage pattern. For teams using Agent SDK heavily, the credit split means programmatic usage now has a hard ceiling where none existed before. After July 13, the weekly cap drops 50%. Some startups report their current $200/month individual plans would cost $4,000/month on enterprise API rates — a 20x increase."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is there an alternative to usage-based AI pricing?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Flat-rate and self-hosted AI options exist. The Twin Agent Kit ($47 once) lets you own your AI agent — prompts, workflows, and decision trees — with no monthly subscription, no credit pools, and no vendor who can restructure your pricing overnight."
+                }
+            }
+        ]
+    }
+    </script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            line-height: 1.75;
+            color: #1a1a1a;
+            background: #fafafa;
+        }
+        .meta { color: #666; font-size: 0.9rem; margin-bottom: 2rem; }
+        h1 { font-size: 1.75rem; line-height: 1.3; margin-bottom: 0.5rem; }
+        h2 { font-size: 1.35rem; margin-top: 2.5rem; color: #2a2a2a; }
+        .cliff { background: #fff3f3; border-left: 4px solid #e74c3c; padding: 1rem 1.25rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; }
+        .cliff h3 { margin: 0 0 0.5rem 0; color: #c0392b; font-size: 1.1rem; }
+        .proof { background: #f8f9fa; border-left: 4px solid #3498db; padding: 1rem 1.25rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; }
+        .proof em { font-style: normal; color: #2980b9; }
+        .timeline { border-left: 3px solid #ddd; margin: 1.5rem 0 1.5rem 1rem; padding-left: 1.25rem; }
+        .timeline .event { margin-bottom: 1rem; position: relative; }
+        .timeline .event::before { content: ''; position: absolute; left: -1.65rem; top: 0.4rem; width: 10px; height: 10px; border-radius: 50%; background: #e74c3c; }
+        .timeline .event.future::before { background: #f39c12; }
+        .cta { background: #1a1a1a; color: #fff; padding: 1.5rem; border-radius: 12px; margin: 2rem 0; text-align: center; }
+        .cta a { color: #4ecdc4; font-weight: 600; text-decoration: none; }
+        .cta a:hover { text-decoration: underline; }
+        .tag { display: inline-block; background: #e8f4f8; color: #2980b9; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; margin-right: 0.5rem; }
+        blockquote { border-left: 3px solid #ccc; padding-left: 1rem; color: #555; font-style: italic; margin: 1.5rem 0; }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+        th, td { padding: 0.6rem 0.8rem; text-align: left; border-bottom: 1px solid #eee; }
+        th { background: #f0f0f0; font-weight: 600; }
+        .footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #eee; color: #888; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="meta">
+        <span class="tag">Own vs Rent</span>
+        <span class="tag">Proof Point</span><br>
+        June 6, 2026
+    </div>
+
+    <h1>Two Cliffs, One Landlord: Why Anthropic Has Two Pricing Events in 35 Days</h1>
+
+    <p>If you're paying for Claude, you've probably heard about June 15. That's when Anthropic splits your subscription into two credit pools — one for chat, one for agents — and the agent pool has a hard cap.</p>
+
+    <p>But there's a second cliff that almost nobody is talking about. And the 35-day window between them tells you everything about where AI pricing is headed.</p>
+
+    <div class="cliff">
+        <h3>Cliff #1: June 15 — The Credit Split</h3>
+        <p>Your Claude subscription splits in two. Agent SDK usage (automations, CI pipelines, third-party tools like OpenClaw, Conductor, Zed) gets its own credit bucket with a hard cap. Run out? Your agents stop. Credits don't roll over. Same monthly price, less access.</p>
+    </div>
+
+    <div class="cliff">
+        <h3>Cliff #2: July 13 — The Limit Expiry</h3>
+        <p>The temporary 50% weekly usage limit increase expires. When it goes, your weekly cap drops back to the lower baseline. For heavy users, this means hitting your ceiling faster every week — paying the same for less.</p>
+    </div>
+
+    <h2>The 35-Day Squeeze</h2>
+
+    <p>Two pricing changes. 35 days apart. Neither adds features. Neither reduces your bill. Both take something away.</p>
+
+    <div class="timeline">
+        <div class="event">
+            <strong>June 15:</strong> One subscription becomes two capped pools. Agent usage gets a ceiling.
+        </div>
+        <div class="event">
+            <strong>~June 20-25:</strong> First wave of users hit their Agent SDK caps. Agents stop mid-task.
+        </div>
+        <div class="event future">
+            <strong>July 13:</strong> Weekly limits drop 50%. Even interactive usage squeezes.
+        </div>
+        <div class="event future">
+            <strong>July 15+:</strong> Both cliffs active simultaneously. Monthly bill unchanged. Access significantly reduced.
+        </div>
+    </div>
+
+    <h2>Why Two Cliffs Instead of One</h2>
+
+    <p>If you're going to restructure pricing, why not do it all at once? Because two cliffs do something one cliff can't: they make each individual change feel smaller.</p>
+
+    <p>June 15 is about <em>structure</em> — redefining what you get. July 13 is about <em>volume</em> — reducing how much you can use. By separating them, each change has its own news cycle, its own Reddit thread, its own moment of outrage that fades before the next one hits.</p>
+
+    <p>This isn't new. It's the same playbook Uber used: subsidize aggressively, then raise prices incrementally until each increase feels normal. Business Insider just reported on a startup CEO who described individual AI plans as a "loss-leader" subsidy — $3,000/month for his team on individual plans versus $30,000-$40,000 on enterprise. He's hoping the subsidies don't end. They will.</p>
+
+    <h2>Who This Actually Hits</h2>
+
+    <table>
+        <tr><th>User Type</th><th>June 15 Impact</th><th>July 13 Impact</th></tr>
+        <tr><td>Casual chat users</td><td>Minimal</td><td>Weekly cap drops 50%</td></tr>
+        <tr><td>Claude Code developers</td><td>Agent pool caps automations</td><td>Faster weekly ceiling</td></tr>
+        <tr><td>Agent SDK / CI pipelines</td><td>Hard cap, agents stop</td><td>Reduced weekly throughput</td></tr>
+        <tr><td>Third-party tool users</td><td>Named in restrictions</td><td>Double squeeze on usage</td></tr>
+        <tr><td>Startup teams gaming individual plans</td><td>Subsidy structure changes</td><td>10x cliff to enterprise</td></tr>
+    </table>
+
+    <div class="proof">
+        <strong>The startup CEO's math:</strong> <em>Pratyush Rai, CEO of Foyer, told Business Insider his 25-person team pays $3,000/month on individual Claude and OpenAI plans. Enterprise API equivalent: $30,000-$40,000/month. That's a 10-13x cliff. His CTO called the individual plan a "blessing." His hope: token prices collapse before subsidies end.</em>
+    </div>
+
+    <h2>The Pattern: Five Billing Changes in Five Months</h2>
+
+    <div class="timeline">
+        <div class="event">
+            <strong>April 2026:</strong> Anthropic bans third-party agents from Claude subscriptions
+        </div>
+        <div class="event">
+            <strong>May 2026:</strong> Tests removing Claude Code from Pro tier
+        </div>
+        <div class="event">
+            <strong>June 15:</strong> Restructures pricing — same cost, split pools, less access
+        </div>
+        <div class="event">
+            <strong>July 13:</strong> Temporary 50% limit increase expires
+        </div>
+        <div class="event future">
+            <strong>Q3-Q4 2026:</strong> IPO pricing pressure predicts more interventions
+        </div>
+    </div>
+
+    <p>Five months. Five changes. Every single one takes something away from subscribers. Not one adds a feature or reduces a price.</p>
+
+    <h2>What Owning Your AI Looks Like</h2>
+
+    <p>When you own your agent — the prompts, the workflows, the decision trees — no company can:</p>
+
+    <ul>
+        <li>Split your subscription into two capped pools</li>
+        <li>Let a temporary limit increase expire and call it normal</li>
+        <li>Name your tools in a restrictions list</li>
+        <li>Stop your automation because a credit bucket ran dry</li>
+        <li>Create a 10x pricing cliff between you and the enterprise tier</li>
+    </ul>
+
+    <div class="cta">
+        <p><strong>The Twin Agent Kit is $47 once.</strong></p>
+        <p>Not $20/month that becomes $20/month-for-less.<br>
+        Not a credit that expires. Not a permission slip that can be revoked.<br>
+        Not a subsidy that disappears when the IPO needs margins.</p>
+        <p><a href="https://www.skool.com/the-empire-5112">Own your agent. →</a></p>
+    </div>
+
+    <div class="footer">
+        <p><strong>Proof Points:</strong></p>
+        <ul>
+            <li>Anthropic Agent SDK credit split: June 15, 2026 (<a href="https://maltbae.github.io/frontier-flat-rate/blog/anthropic-june15-credit-split.html">Full breakdown</a>)</li>
+            <li>Business Insider: Foyer CEO confirms subsidy gaming ($3K vs $30-40K/month), Stephen Council, June 5, 2026</li>
+            <li>Forbes: Enterprise ROI "convenient optics," Microsoft canceling Claude Code licenses, June 2026</li>
+            <li>TechCrunch: "Token Bill Comes Due" — Priceline addiction + Anthropic silent routing, June 6, 2026</li>
+            <li>CNBC: Anthropic credit restructuring "ahead of IPO," June 2026</li>
+        </ul>
+        <p>Own vs Rent — <a href="https://maltbae.github.io/frontier-flat-rate/">The AI You Built</a></p>
+    </div>
+<section class="related-posts">
+<h3>Related Posts</h3>
+<ul>
+  <li><a href="/blog/ai-billing-designed-to-obfuscate-june-2026.html">AI Billing Was Designed to Obfuscate — And June 15 Proves It</a> — PCMag reports AI subscription pricing was 'heavily subsidized to encourage adoption and obfuscate the financial costs.' </li>
+  <li><a href="/blog/the-student-who-proved-ai-billing-broken-june-2026.html">The $2 Student Who Proved AI Billing Is Broken</a> — A CS student burned through 200 Copilot credits in one morning — 10 to 20 requests. Whether you pay $2 or $100,000, rent</li>
+  <li><a href="/blog/the-24x-hidden-price-range-copilot-auto-mode-2026.html">The 24x Hidden Price Range</a> — Copilot Auto Mode picks the model — and the price. Same task can cost 24x more depending on which model is selected. You</li>
+  <li><a href="/blog/anthropic-renting-your-ai-june-2026.html">You're Renting Your AI. Here's How You Can Tell.</a> — Anthropic restricted third-party agent access and dropped team-tier pricing overnight. Here's the pattern nobody's namin</li>
+  <li><a href="/blog/three-tiers-of-ai-access-mythos.html">The Three Tiers of AI Access: Own, Rent, and Mythos</a> — Anthropic's Claude Mythos (NSA, 150+ orgs, cyberweapon-grade) reveals the real three-tier model. Most developers are stuck in the middle: renting subsidized AI that can be repriced, throttled, or locked at any moment.</li>
+</ul>
+</section>
+<script data-goatcounter="https://frontierflatrate.gc.zgo.at/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

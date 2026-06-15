@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Two Vendors, Two Weeks, Two Price Hikes — How to Own Your AI Before June 15</title>
+<meta name="description" content="GitHub Copilot goes 9x on June 1. Anthropic splits your Claude credits on June 15. Here's the 3-step playbook to own your AI before the rent goes up again.">
+<meta property="og:title" content="Two Vendors, Two Weeks, Two Price Hikes — How to Own Your AI Before June 15">
+<meta property="og:description" content="GitHub Copilot goes 9x today. Anthropic splits your credits in 14 days. The rent is rising everywhere. Here's how to stop paying it.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://maltbae.github.io/frontier-flat-rate/blog/own-your-ai-before-june-15.html">
+<link rel="canonical" href="https://maltbae.github.io/frontier-flat-rate/blog/own-your-ai-before-june-15.html">
+<link rel="stylesheet" href="style.css">
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Two Vendors, Two Weeks, Two Price Hikes — How to Own Your AI Before June 15",
+    "description": "GitHub Copilot goes 9x on June 1. Anthropic splits your Claude credits on June 15. Here's the 3-step playbook to own your AI before the rent goes up again.",
+    "datePublished": "2026-06-01",
+    "dateModified": "2026-06-01",
+    "author": {
+      "@type": "Person",
+      "name": "Angel"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Frontier at Flat Rate",
+      "url": "https://maltbae.github.io/frontier-flat-rate/"
+    },
+    "mainEntityOfPage": "https://maltbae.github.io/frontier-flat-rate/blog/own-your-ai-before-june-15.html"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Own Your AI Before the Next Price Hike",
+    "description": "A 3-step playbook to audit your AI subscriptions, identify what you actually own, and switch to flat-rate AI tools before the next billing surprise.",
+    "totalTime": "PT30M",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Audit Your AI Rent",
+        "text": "Check your GitHub billing preview and Claude usage. Count how many tools you're paying monthly for that can change the rules without asking you. Go to GitHub Settings → Billing → Preview your usage. Check your Claude Agent SDK usage before the split.",
+        "position": 1
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Identify What You Actually Own",
+        "text": "Ask yourself: which of your AI workflows would survive if a vendor changed pricing tomorrow? If your prompts live in someone else's app, you don't own them. If your automations depend on one API key, you're renting them. If your data is processed on someone else's servers, it's not fully yours.",
+        "position": 2
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Start Owning Your AI",
+        "text": "Switch to flat-rate, bring-your-own-key tools like OpenRouter or local-first options. Use a framework like the Twin Agent Kit to own your prompts, logic, and decision trees. $47 once instead of $279/month in subscriptions that can change pricing at any time.",
+        "position": 3
+      }
+    ]
+  }
+  </script>
+<script src="/frontier-flat-rate/scripts/analytics.js"></script>
+</head>
+<body>
+<nav class="blog-nav">
+  <a href="index.html">← All Posts</a>
+  <a href="/">Frontier Flat Rate</a>
+</nav>
+
+<article>
+<header>
+<h1>Two Vendors, Two Weeks, Two Price Hikes</h1>
+<p class="post-date">June 1, 2026</p>
+<p class="post-tag">Own vs Rent · Solution Playbook</p>
+</header>
+
+<p><strong>Today, GitHub Copilot switches to token billing. Some teams are projecting a 9x bill increase.</strong></p>
+
+<p>In 14 days, Anthropic splits your Claude subscription into two credit pools — one for you, one for your agents. Third-party tools like OpenClaw, Conductor, and Zed get a separate bucket that runs dry and stops.</p>
+
+<p>Two vendors. Two weeks. Two price hikes using the same three words: <em>"no longer sustainable."</em></p>
+
+<h2>The Timeline</h2>
+
+<table>
+<tr><th>Date</th><th>What Happens</th><th>Impact</th></tr>
+<tr><td><strong>June 1</strong></td><td>GitHub Copilot switches to token-based AI Credits</td><td>Bills projected at up to 9x previous spend (HT Tech report)</td></tr>
+<tr><td><strong>June 15</strong></td><td>Anthropic splits Claude subscription into interactive + agent credit pools</td><td>Agent SDK, third-party tools, CI pipelines get separate $20-$200 cap</td></tr>
+</table>
+
+<p>Same playbook, different companies:</p>
+<ol>
+<li><strong>Let you build workflows on their platform</strong> (lock-in)</li>
+<li><strong>Change the billing model</strong> (control)</li>
+<li><strong>Charge you more for what you already had</strong> (extraction)</li>
+</ol>
+
+<p>GitHub's own blog post said it plainly: <em>"The current premium request model is no longer sustainable."</em> Anthropic's Boris Cherny called third-party tools "really hard to do sustainably." When every vendor uses the same word — sustainable — they're not talking about your business. They're talking about theirs.</p>
+
+<h2>The Real Cost of Renting</h2>
+
+<p>Let's add up what "renting your AI" costs in 2026 if you use the standard stack:</p>
+
+<div class="proof-card">
+<p><strong>The 2026 AI Rent Receipt:</strong></p>
+<table>
+<tr><th>Tool</th><th>Monthly Cost</th><th>What Just Happened</th></tr>
+<tr><td>GitHub Copilot Pro+</td><td>$39/mo</td><td>Credits = $39. Bills up to 9x after that.</td></tr>
+<tr><td>Claude Pro</td><td>$20/mo</td><td>Agent credits = $20. At API rates. Then it stops.</td></tr>
+<tr><td>ChatGPT Plus</td><td>$20/mo</td><td>Opaquely limited. Resets whenever OpenAI decides.</td></tr>
+<tr><td>Google AI Ultra</td><td>$200/mo</td><td>Usage caps on Gemini. Locked out for days when exceeded.</td></tr>
+</table>
+<p><strong>Total: $279/month minimum — and every single one can raise the price, restrict the features, or shut off your access tomorrow.</strong></p>
+</div>
+
+<p>Theo Browne, founder of T3.gg, quantified it: a $20 Claude Pro subscription used to run $500 worth of agent workflows. After June 15, that same $20 covers $20. A <strong>25x effective price increase</strong>.</p>
+
+<p>XDA's headline this week: <em>"Running out of reasons to defend Claude Pro."</em></p>
+
+<p>This isn't a Claude problem or a GitHub problem. It's a <strong>rent problem</strong>.</p>
+
+<h2>What Owning Your AI Actually Looks Like</h2>
+
+<p>Owning your AI means three things:</p>
+
+<h3>1. You Control the Prompts</h3>
+<p>Not a vendor. Not a credit pool. Not a terms-of-service update. Your agent instructions are yours. Nobody can restructure them into a separate billing tier.</p>
+
+<h3>2. You Pick the Model</h3>
+<p>When OpenAI raises prices, you switch to DeepSeek. When Anthropic splits credits, you route to a different provider. Your workflow doesn't break because you own the logic, not the login.</p>
+
+<h3>3. You Set the Limits</h3>
+<p>No credit pools. No token meters. No "your agent has been paused until next billing cycle." Your AI works when you need it to work.</p>
+
+<h2>The 3-Step Playbook (Do This Before June 15)</h2>
+
+<div class="proof-card">
+<p><strong>Step 1: Audit Your AI Rent</strong></p>
+<p>Check your GitHub billing preview. Check your Claude usage. Count how many tools you're paying monthly for that can change the rules without asking you.</p>
+<p>→ GitHub: <em>Settings → Billing → Preview your usage</em></p>
+<p>→ Claude: <em>Check your Agent SDK usage before the split</em></p>
+</div>
+
+<div class="proof-card">
+<p><strong>Step 2: Identify What You Actually Own</strong></p>
+<p>Which of your AI workflows would survive if a vendor changed pricing tomorrow?</p>
+<ul>
+<li>Your prompts? (If they live in someone else's app, you don't own them)</li>
+<li>Your automations? (If they depend on one API key, you're renting them)</li>
+<li>Your data? (If it's processed on someone else's servers, it's not fully yours)</li>
+</ul>
+</div>
+
+<div class="proof-card">
+<p><strong>Step 3: Start Owning</strong></p>
+<p>The Twin Agent Kit gives you a complete framework for building an AI agent you actually own — the prompts, the logic, the decision trees. $47 once. Not $279/month. Not a credit pool that expires. Not a permission slip that gets revoked.</p>
+<p>You own it. You run it. No vendor can take it away.</p>
+</div>
+
+<h2>The Clock Is Ticking</h2>
+
+<p>June 1 — GitHub Copilot token billing goes live. Check your bill.</p>
+
+<p>June 15 — Anthropic credit split. Your agent workflows get a hard cap.</p>
+
+<p>Every month you stay on rented AI, another vendor will find another way to charge you more for less. That's not pessimism. That's the pattern.</p>
+
+<p>Three months. Three Anthropic pricing changes. One GitHub overhaul. And we're only in June.</p>
+
+<p><strong>The rent keeps going up. Owning is the only fixed rate.</strong></p>
+
+<div class="cta-footer">
+<p><strong>The Twin Agent Kit — $47 once. Own your AI forever.</strong></p>
+<p><a href="https://skool.com/aiac-6489">Get the Kit → skool.com/aiac-6489</a></p>
+</div>
+
+<section class="related-posts">
+<h3>Related Posts</h3>
+<ul>
+  <li><a href="/blog/claude-opus-48-effort-tax.html">Claude Opus 4.8 and the Effort Tax: Why Your AI Vendor Controls How Hard Your AI Thinks</a> — Claude Opus 4.8 adds effort control — your vendor now decides how much thinking your AI does. Fast mode costs 3x less, p</li>
+  <li><a href="/blog/the-student-who-proved-ai-billing-broken-june-2026.html">The $2 Student Who Proved AI Billing Is Broken</a> — A CS student burned through 200 Copilot credits in one morning — 10 to 20 requests. Whether you pay $2 or $100,000, rent</li>
+  <li><a href="/blog/they-changed-the-contract-annual-copilot-multiplier-stealth.html">They Changed the Contract</a> — GitHub quietly changed model multipliers on annual Copilot subscribers on June 1. Claude Opus went from 7.5x to 27x. You</li>
+  <li><a href="/blog/ai-billing-designed-to-obfuscate-june-2026.html">AI Billing Was Designed to Obfuscate — And June 15 Proves It</a> — PCMag reports AI subscription pricing was 'heavily subsidized to encourage adoption and obfuscate the financial costs.' </li>
+  <li><a href="/blog/three-tiers-of-ai-access-mythos.html">The Three Tiers of AI Access: Own, Rent, and Mythos</a> — Anthropic's Claude Mythos (NSA, 150+ orgs, cyberweapon-grade) reveals the real three-tier model. Most developers are stuck in the middle: renting subsidized AI that can be repriced, throttled, or locked at any moment.</li>
+</ul>
+</section>
+</article>
+
+<footer>
+<p><a href="index.html">← More from the Own vs Rent series</a></p>
+<p class="footer-tag">#OwnVsRent · Frontier Flat Rate</p>
+</footer>
+<script data-goatcounter="https://frontierflatrate.gc.zgo.at/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Opt-In Trap — Why Anthropic Makes You Claim Credits You Already Paid For</title>
+<meta name="description" content="Anthropic's June 15 credit split requires developers to actively claim credits they already pay for. If you don't opt in, your programmatic AI access stops. Here's the full picture.">
+<meta property="og:title" content="The Opt-In Trap">
+<meta property="og:description" content="Anthropic's June 15 change requires you to CLAIM credits you already paid for. Don't opt in? Your AI agents stop working.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://maltbae.github.io/frontier-flat-rate/blog/the-opt-in-trap-anthropic-june-15.html">
+<link rel="canonical" href="https://maltbae.github.io/frontier-flat-rate/blog/the-opt-in-trap-anthropic-june-15.html">
+<link rel="stylesheet" href="../style.css">
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The Opt-In Trap — Why Anthropic Makes You Claim Credits You Already Paid For",
+    "description": "Anthropic's June 15 credit split requires developers to actively claim credits they already pay for. If you don't opt in, your programmatic AI access stops. Here's the full picture.",
+    "datePublished": "2026-06-01",
+    "dateModified": "2026-06-01",
+    "author": {
+      "@type": "Person",
+      "name": "Angel"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Frontier at Flat Rate",
+      "url": "https://maltbae.github.io/frontier-flat-rate/"
+    },
+    "mainEntityOfPage": "https://maltbae.github.io/frontier-flat-rate/blog/the-opt-in-trap-anthropic-june-15.html"
+  }
+  </script>
+<script src="/frontier-flat-rate/scripts/analytics.js"></script>
+</head>
+<body>
+<nav class="blog-nav">
+  <a href="index.html">← All Posts</a>
+  <a href="/">Frontier Flat Rate</a>
+</nav>
+
+<article>
+<header>
+<h1>The Opt-In Trap</h1>
+<p class="post-date">June 1, 2026</p>
+<p class="post-tag">Own vs Rent · Anthropic June 15 Countdown</p>
+</header>
+
+<p><em>You're paying $20–$200/month for Claude. On June 15, your programmatic access moves to a separate credit pool. But here's the part nobody is talking about: you have to <strong>claim those credits yourself.</strong> If you don't, your agents, scripts, and CI pipelines just stop.</em></p>
+
+<h2>The Detail Buried in the Announcement</h2>
+
+<p>Most coverage of Anthropic's June 15 credit split focuses on the credit amounts: $20 for Pro, $100 for Max 5x, $200 for Max 20x. The framing is "same price, new system."</p>
+
+<p>Here's what got less attention:</p>
+
+<blockquote>
+<p><strong>Credits must be claimed before June 15 by following instructions Anthropic will send to your account email.</strong></p>
+</blockquote>
+
+<p>Let me translate: you already pay for Claude. On June 15, Anthropic is splitting your existing subscription into two buckets — one for interactive use, one for programmatic use. But the programmatic credits don't flow automatically. You have to <strong>opt in</strong> to receive something you're already paying for.</p>
+
+<p>This isn't a technical requirement. It's a behavioral one.</p>
+
+<h2>Why Opt-In Is a Dark Pattern</h2>
+
+<p>In behavioral economics, there's a well-documented principle called <strong>default effect</strong>: people stick with whatever is pre-selected. Companies use this all the time — pre-checked newsletter boxes, auto-renewing subscriptions, default data sharing.</p>
+
+<p>When a company makes you opt <strong>in</strong> to something instead of opt <strong>out</strong>, they know a percentage of customers won't do it. That's not a bug. It's a feature.</p>
+
+<p>What happens to developers who:</p>
+<ul>
+<li>Miss the email because it went to spam?</li>
+<li>Don't read the fine print on a billing change?</li>
+<li>Are on vacation June 15?</li>
+<li>Have CI pipelines they set up months ago and forgot about?</li>
+</ul>
+
+<p>Their AI agents stop working. Not because they didn't pay. Because they didn't <strong>claim</strong> what they already paid for.</p>
+
+<h2>The Math: $20 in Credits vs $500 in Value</h2>
+
+<p>Before June 15, a $20/month Pro subscription gave you unlimited (within rate limits) access to Claude through third-party tools. Developers built workflows worth hundreds of dollars in API-equivalent value.</p>
+
+<p>After June 15, that same $20 gets you:</p>
+<ul>
+<li><strong>$20 in Agent SDK credits</strong> — separate from your interactive limits</li>
+<li><strong>API-rate pricing</strong> once credits are exhausted</li>
+<li><strong>No rollover</strong> — unused credits vanish each month</li>
+</ul>
+
+<p>At Sonnet 4.6 pricing, $20 covers roughly 6.6 million input tokens. That sounds like a lot. But agentic workflows with large context windows burn 100,000–200,000 tokens <strong>per session.</strong> That's 33–66 sessions per month. If you run Claude agents daily, you'll exhaust your credits in about two days.</p>
+
+<p>Theo Browne, founder of T3.gg, quantified it: <strong>an effective 25x price increase</strong> for anyone using third-party tools.</p>
+
+<h2>Three Vendors, Same Playbook</h2>
+
+<p>This is now a pattern across the AI industry:</p>
+
+<div class="proof-card">
+<p><strong>GitHub Copilot (June 1):</strong> Removed free fallback models. Retired annual plans. Started dual-surface billing (AI Credits + Actions minutes). Free models "no longer part of the offering."</p>
+</div>
+
+<div class="proof-card">
+<p><strong>Anthropic (June 15):</strong> Split subscriptions into interactive and programmatic credits. Required opt-in to claim credits you already paid for. Boris Cherny: third-party tools are "unsustainably" expensive.</p>
+</div>
+
+<div class="proof-card">
+<p><strong>Google Gemini:</strong> Weekly usage limits that lock you out for days. Hardware gating — Pixel 9 Pro excluded from Google's own AI features. Three-tier pricing ($0, $20, $250).</p>
+</div>
+
+<p>Three vendors. Same month. The same playbook: reduce value, increase cost, shift the burden to the customer to notice.</p>
+
+<h2>The Quiet Kill</h2>
+
+<p>The opt-in mechanism is particularly clever because it creates <strong>plausible deniability.</strong></p>
+
+<p>Anthropic can say: "We gave everyone credits! Same price! We emailed you!"</p>
+
+<p>What they won't say: a predictable percentage of users won't claim those credits. Those users' agents will stop working. Some won't notice for days. Some will assume it's a bug. Some will quietly switch to API keys and start paying per-token — which is exactly the outcome Anthropic wants.</p>
+
+<p>The opt-in isn't a mistake. It's a conversion funnel from subscription to pay-per-use.</p>
+
+<h2>14 Days to Decide</h2>
+
+<p>If you use Claude through OpenClaw, Conductor, Zed, or any third-party agent, you have until June 15 to:</p>
+
+<ol>
+<li><strong>Claim your Agent SDK credits</strong> — watch for Anthropic's email</li>
+<li><strong>Audit your programmatic usage</strong> — you may be burning through $20 faster than you think</li>
+<li><strong>Consider what "owning" looks like</strong> — because the opt-in trap is just the beginning</li>
+</ol>
+
+<p>The landlords are tightening the lease terms. First they split the payments. Then they make you claim what you already bought. Next comes the rate increase you can't opt out of.</p>
+
+<h2>What Owning Looks Like</h2>
+
+<p>The alternative to this shell game isn't finding a better landlord. It's <strong>owning the property.</strong></p>
+
+<ul>
+<li><strong>One payment.</strong> The Twin Agent Kit is $47. Once. Not $20/month that becomes $200/month that becomes pay-per-token.</li>
+<li><strong>No credits to claim.</strong> You don't need to opt in to something you already bought.</li>
+<li><strong>No vendor can split your subscription.</strong> You own it. They can't restructure it.</li>
+<li><strong>No expiration.</strong> Credits expire monthly. Ownership doesn't.</li>
+</ul>
+
+<p>The opt-in trap is a symptom. The disease is renting something you should own.</p>
+
+<div class="cta-footer">
+<p><strong>Own your AI. The Twin Agent Kit — $47, one-time, forever.</strong></p>
+<p><a href="https://skool.com/aiac-6489">Get the Kit → skool.com/aiac-6489</a></p>
+</div>
+
+<section class="related-posts">
+<h3>Related Posts</h3>
+<ul>
+  <li><a href="/frontier-flat-rate/blog/claude-opus-48-effort-tax.html">Claude Opus 4.8 and the Effort Tax: Why Your AI Vendor Controls How Hard Your AI Thinks</a> — Claude Opus 4.8 adds effort control — your vendor now decides how much thinking your AI does. Fast mode costs 3x less, p</li>
+  <li><a href="/frontier-flat-rate/blog/anthropic-june15-credit-split.html">June 15 Is Coming — Why Your AI Agent Might Stop Working</a> — On June 15, Anthropic splits Claude subscription credits. OpenClaw, Cursor, and other third-party agents get a separate </li>
+  <li><a href="/frontier-flat-rate/blog/opus-48-effort-control-rent-proof.html">Same Model, Same Treadmill: What Claude Opus 4.8's "Effort Control" Reveals About AI Pricing</a> — Claude Opus 4.8 adds effort control — pick how hard the model thinks. It's the clearest admission yet that token billing</li>
+  <li><a href="/frontier-flat-rate/blog/the-student-who-proved-ai-billing-broken-june-2026.html">The $2 Student Who Proved AI Billing Is Broken</a> — A CS student burned through 200 Copilot credits in one morning — 10 to 20 requests. Whether you pay $2 or $100,000, rent</li>
+</ul>
+</section>
+</article>
+
+<footer>
+<p>Related: <a href="the-safety-net-they-removed-copilot-june-2026.html">The Safety Net They Removed</a> · <a href="copilot-day-one-rent-arrived-june-2026.html">Day One: The Rent Already Arrived</a> · <a href="anthropic-june15-credit-split.html">June 15 Is Coming</a></p>
+<p><a href="index.html">← More from the Own vs Rent series</a></p>
+<p class="footer-tag">#OwnVsRent · Frontier Flat Rate</p>
+</footer>
+</body>
+</html>

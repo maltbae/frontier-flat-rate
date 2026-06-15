@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Three Billing Changes in Five Months — When Your AI Vendor Can't Stop Reworking Your Bill | Frontier at Flat Rate</title>
+<meta name="description" content="Anthropic changed billing four times in five months. GitHub Copilot switched to tokens overnight. When vendors rework your bill this often, who's really in control of your costs?">
+<link rel="canonical" href="https://maltbae.github.io/frontier-flat-rate/blog/three-billing-changes-five-months.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Three Billing Changes in Five Months — When Your AI Vendor Can't Stop Reworking Your Bill",
+  "datePublished": "2026-06-03",
+  "dateModified": "2026-06-03",
+  "author": {"@type": "Person", "name": "Angel Maltba"},
+  "publisher": {"@type": "Organization", "name": "Frontier at Flat Rate"},
+  "description": "Anthropic changed billing four times in five months. GitHub Copilot switched to tokens overnight. When vendors rework your bill this often, who's really in control of your costs?",
+  "mainEntityOfPage": "https://maltbae.github.io/frontier-flat-rate/blog/three-billing-changes-five-months.html"
+}
+</script>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:720px;margin:0 auto;padding:20px;line-height:1.7;color:#1a1a1a;background:#fafafa}
+h1{font-size:1.85em;line-height:1.3;margin-bottom:0.4em}
+.meta{color:#666;font-size:0.9em;margin-bottom:1.5em}
+.highlight{background:#fff3cd;border-left:4px solid #ffc107;padding:12px 16px;margin:1.2em 0;border-radius:4px}
+.highlight strong{color:#856404}
+.proof{background:#f8d7da;border-left:4px solid #dc3545;padding:12px 16px;margin:1.2em 0;border-radius:4px}
+.own{background:#d4edda;border-left:4px solid #28a745;padding:12px 16px;margin:1.2em 0;border-radius:4px}
+.timeline{margin:1.5em 0;padding-left:24px;border-left:3px solid #007bff}
+.timeline .event{margin-bottom:1em;position:relative}
+.timeline .event::before{content:'';position:absolute;left:-30px;top:6px;width:12px;height:12px;border-radius:50%;background:#007bff}
+.timeline .event:last-child::before{background:#dc3545}
+.timeline .date{font-weight:700;color:#007bff;font-size:0.9em}
+.timeline .desc{margin-top:2px}
+.cta{background:#007bff;color:#fff;padding:20px;border-radius:8px;margin:2em 0;text-align:center}
+.cta a{color:#fff;font-weight:700;text-decoration:underline}
+.comparison{width:100%;border-collapse:collapse;margin:1.5em 0}
+.comparison th,.comparison td{border:1px solid #ddd;padding:8px 12px;text-align:left}
+.comparison th{background:#007bff;color:#fff}
+.comparison tr:nth-child(even){background:#f5f5f5}
+a{color:#007bff}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #ddd;color:#888;font-size:0.85em}
+</style>
+<script src="/frontier-flat-rate/scripts/analytics.js"></script>
+</head>
+<body>
+
+<h1>Three Billing Changes in Five Months — When Your AI Vendor Can't Stop Reworking Your Bill</h1>
+<p class="meta">June 3, 2026 · 5 min read</p>
+
+<p>Between January and June 2026, Anthropic restructured how developers pay for Claude <strong>four times</strong>. GitHub Copilot switched from flat-rate to token billing overnight. And the developers caught in the middle are discovering a hard truth: when your vendor can't decide how to charge you, <em>you're</em> the one paying for their economics problem.</p>
+
+<h2>The Timeline Speaks for Itself</h2>
+
+<div class="timeline">
+  <div class="event">
+    <div class="date">January 2026</div>
+    <div class="desc">Anthropic blocks subscription OAuth tokens from working with third-party tools. Developer backlash. Reversed within days.</div>
+  </div>
+  <div class="event">
+    <div class="date">February 2026</div>
+    <div class="desc">Anthropic revises Terms of Service to formally restrict OAuth authentication to Claude Code and Claude.ai only.</div>
+  </div>
+  <div class="event">
+    <div class="date">April 4, 2026</div>
+    <div class="desc">Anthropic enforces outright ban on third-party agents using subscription credentials, citing "outsized strain." More than 135,000 OpenClaw instances are running at the time.</div>
+  </div>
+  <div class="event">
+    <div class="date">June 1, 2026</div>
+    <div class="desc">GitHub Copilot switches to token-based billing. Developers report burning 8% of monthly credits in 2 hours. A single change request costs $6.</div>
+  </div>
+  <div class="event">
+    <div class="date">June 15, 2026</div>
+    <div class="desc">Anthropic splits agent and chat billing into separate credit pools. Enterprise Standard seats get <strong>$0</strong> agent credits. Automated workflows that exceed their allocation just stop — no fallback, no notification.</div>
+  </div>
+</div>
+
+<div class="proof">
+  <strong>The Rent Problem:</strong> Four billing changes in five months is not optimization. It's a vendor that doesn't know what its product costs to deliver — and is making you pay for the learning curve.
+</div>
+
+<h2>What Actually Happens on June 16</h2>
+
+<p>If you're a developer running Claude in CI/CD, automated scripts, or through the Agent SDK, here's what changes:</p>
+
+<ul>
+  <li><strong>Pro subscribers:</strong> $20/month in agent credits (separate from your subscription). At API rates, that's roughly 1-3 hours of moderate agent usage.</li>
+  <li><strong>Enterprise Standard seats:</strong> $0. Nothing. You pay for the seat, but get zero agent credits.</li>
+  <li><strong>When credits run out:</strong> Your automated requests fail. They don't queue. They don't fall back to a cheaper model. They don't notify you. They just stop.</li>
+  <li><strong>Overflow billing:</strong> Off by default. You must manually enable it. If you don't, production workflows fail silently.</li>
+  <li><strong>Credits don't roll over.</strong> They don't pool across team members. Each user is an island.</li>
+</ul>
+
+<div class="highlight">
+  <strong>TechTimes (June 2, 2026):</strong> "A CI/CD workflow triggered under multiple committers' credentials cannot aggregate credits across the team — each user's credit applies only to that user's calls."
+</div>
+
+<h2>The Copilot Side of the Same Coin</h2>
+
+<p>GitHub's token billing went live June 1. Within hours:</p>
+
+<ul>
+  <li>A developer on the $39/month Pro+ plan used <strong>8% of monthly credits in 2 hours</strong> — on track to exhaust them in under 2 days.</li>
+  <li>Another developer spent <strong>$6 on a single change request</strong> they called "impossible to predict."</li>
+  <li>A session using Claude 4.8 burned <strong>1,180 credits (16% of monthly allowance)</strong> for results described as "mediocre."</li>
+  <li>Developers are moving to <strong>OpenRouter, RooCode, and LM Studio</strong> — where credits roll over for up to a year.</li>
+</ul>
+
+<p>Two vendors. Two weeks. The same "sustainable pricing" language. The same result: you pay more for the same work.</p>
+
+<h2>Pricing Velocity: A New Metric for Vendor Risk</h2>
+
+<table class="comparison">
+  <tr>
+    <th>Vendor</th>
+    <th>Billing Changes (2026)</th>
+    <th>Changes/Month</th>
+    <th>Credit Rollover</th>
+  </tr>
+  <tr>
+    <td>Anthropic</td>
+    <td>4 (Jan, Feb, Apr, Jun)</td>
+    <td>0.8</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>GitHub Copilot</td>
+    <td>2 (Apr, Jun)</td>
+    <td>0.4</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>OpenClaw (Own)</td>
+    <td>0</td>
+    <td>0</td>
+    <td>N/A — flat rate</td>
+  </tr>
+</table>
+
+<div class="own">
+  <strong>The Ownership Alternative:</strong> When you run your own AI tools, you choose the model, you control the cost, and nobody restructures your billing while you sleep. OpenClaw gives you frontier models at a flat rate — no credits, no tokens, no surprise.
+</div>
+
+<h2>What to Do Before June 15</h2>
+
+<ol>
+  <li><strong>Audit your automated workflows.</strong> Anything using Claude Agent SDK, <code>claude -p</code>, or third-party tools will be affected.</li>
+  <li><strong>Check your plan.</strong> Enterprise Standard seats get $0 agent credits. Pro gets $20. Know your ceiling.</li>
+  <li><strong>Enable overflow billing</strong> if you can't afford silent workflow failures — but understand this opens the door to unlimited charges.</li>
+  <li><strong>Consider the ownership path.</strong> Flat-rate tools like OpenClaw, or direct API access with cost controls, eliminate the billing surprise cycle entirely.</li>
+</ol>
+
+<div class="cta">
+  <p><strong>Tired of vendors rewriting your bill?</strong></p>
+  <p>Join the <a href="https://www.skool.com/twin-agent-builders">Twin Agent Builders community</a> — learn to own your AI tools, control your costs, and stop renting access to models you could run yourself.</p>
+  <p><a href="https://www.skool.com/twin-agent-builders">Get the Twin Agent Kit — $47 → Own Your AI →</a></p>
+</div>
+
+<footer>
+  <p>Frontier at Flat Rate — Own your AI. Don't rent it.</p>
+  <p>Sources: TechTimes (June 2, 2026), gHacks (June 2, 2026), Anthropic Help Center, GitHub Community Forum</p>
+</footer>
+
+<script data-goatcounter="https://frontierflatrate.gc.zgo.at/count" async src="//gc.zgo.at/count.js"></script>
+<section class="related-posts">
+<h3>Related Posts</h3>
+<ul>
+  <li><a href="/blog/ai-billing-designed-to-obfuscate-june-2026.html">AI Billing Was Designed to Obfuscate — And June 15 Proves It</a> — PCMag reports AI subscription pricing was 'heavily subsidized to encourage adoption and obfuscate the financial costs.' </li>
+  <li><a href="/blog/claude-opus-48-effort-tax.html">Claude Opus 4.8 and the Effort Tax: Why Your AI Vendor Controls How Hard Your AI Thinks</a> — Claude Opus 4.8 adds effort control — your vendor now decides how much thinking your AI does. Fast mode costs 3x less, p</li>
+  <li><a href="/blog/copilot-alternatives-2026.html">Copilot Alternatives in 2026: Flat-Rate AI Tools That Won't Surprise-Bill You</a> — GitHub Copilot token billing starts June 1, 2026. Compare 7 flat-rate AI coding alternatives — no tokens, no metering, n</li>
+  <li><a href="/blog/copilot-billing-changes-june-2026.html">Copilot Billing Changes June 2026: What Developers Need to Know</a> — GitHub Copilot switches to token billing June 1, 2026. Here's what changes, how much more you'll pay, and the best alter</li>
+  <li><a href="/blog/three-tiers-of-ai-access-mythos.html">The Three Tiers of AI Access: Own, Rent, and Mythos</a> — Anthropic's Claude Mythos (NSA, 150+ orgs, cyberweapon-grade) reveals the real three-tier model. Most developers are stuck in the middle: renting subsidized AI that can be repriced, throttled, or locked at any moment.</li>
+</ul>
+</section>
+</body>
+</html>

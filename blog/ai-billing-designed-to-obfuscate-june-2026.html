@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Billing Was Designed to Obfuscate — And June 15 Proves It</title>
+<meta name="description" content="PCMag reports AI subscription pricing was 'heavily subsidized to encourage adoption and obfuscate the financial costs.' The subsidy era ends June 15. Here's what it means for developers.">
+<meta name="author" content="The AI You Built">
+<link rel="canonical" href="https://maltbae.github.io/frontier-flat-rate/blog/ai-billing-designed-to-obfuscate-june-2026.html">
+<meta property="og:title" content="AI Billing Was Designed to Obfuscate — And June 15 Proves It">
+<meta property="og:description" content="PCMag confirms AI pricing was designed to hide real costs. The subsidy ends June 15. Are you ready?">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://maltbae.github.io/frontier-flat-rate/blog/ai-billing-designed-to-obfuscate-june-2026.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Billing Was Designed to Obfuscate — And June 15 Proves It">
+<meta name="twitter:description" content="PCMag confirms AI pricing was designed to hide real costs. The subsidy ends June 15. Are you ready?">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AI Billing Was Designed to Obfuscate — And June 15 Proves It",
+  "description": "PCMag reports AI subscription pricing was designed to obfuscate real costs. The subsidy era ends June 15, 2026.",
+  "datePublished": "2026-06-03T12:00:00-04:00",
+  "dateModified": "2026-06-03T12:00:00-04:00",
+  "author": {"@type": "Organization", "name": "The AI You Built"},
+  "publisher": {"@type": "Organization", "name": "The AI You Built"},
+  "mainEntityOfPage": "https://maltbae.github.io/frontier-flat-rate/blog/ai-billing-designed-to-obfuscate-june-2026.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What did PCMag say about AI billing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PCMag reported that AI subscription pricing has been 'heavily subsidized to encourage adoption and obfuscate the financial costs of AI.' This is the first mainstream outlet to use adversarial framing — calling the pricing structure deceptive rather than merely expensive."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens on June 15, 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On June 15, Anthropic separates Agent SDK usage from subscription pools. Developers get a separate monthly credit at standard API rates with no rollover. When credits run out, automated requests simply fail. Enterprise Standard seats get $0 in credits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much are Copilot costs actually increasing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PCMag reports one user going from $39/month to $1,800/month — a 46x increase. Other reports include $29→$750 (26x) and $50→$3,000 (60x). Multiple users burned through their entire monthly credit allocation on Day 1."
+      }
+    }
+  ]
+}
+</script>
+<style>
+body{font-family:system-ui,-apple-system,sans-serif;max-width:720px;margin:0 auto;padding:2rem 1rem;line-height:1.7;color:#1a1a1a}
+h1{font-size:1.8rem;line-height:1.3;margin-bottom:0.5rem}
+h2{font-size:1.4rem;margin-top:2rem;color:#2563eb}
+blockquote{border-left:4px solid #2563eb;padding:0.5rem 1rem;margin:1.5rem 0;background:#f0f4ff;border-radius:0 8px 8px 0;font-style:italic}
+.alert{background:#fef2f2;border:1px solid #fecaca;padding:1rem;border-radius:8px;margin:1.5rem 0}
+.cta{background:#2563eb;color:white;padding:1rem 1.5rem;border-radius:8px;text-align:center;margin:2rem 0;font-weight:600;font-size:1.1rem}
+.cta a{color:white;text-decoration:none}
+.data-table{width:100%;border-collapse:collapse;margin:1rem 0}
+.data-table th,.data-table td{border:1px solid #e5e7eb;padding:0.5rem 0.75rem;text-align:left;font-size:0.9rem}
+.data-table th{background:#f0f4ff}
+.countdown{background:#fef3c7;border:2px solid #f59e0b;padding:1rem;border-radius:8px;text-align:center;font-size:1.3rem;font-weight:700;margin:1.5rem 0}
+.source{font-size:0.8rem;color:#6b7280}
+.tier0{background:#fef2f2;font-weight:600}
+a{color:#2563eb}
+</style>
+<script src="/frontier-flat-rate/scripts/analytics.js"></script>
+</head>
+<body>
+
+<h1>AI Billing Was Designed to Obfuscate — And June 15 Proves It</h1>
+<p class="source">June 3, 2026 · 8 min read · Sources: PCMag, DigitalApplied, TechTimes, Ars Technica, DEV Community</p>
+
+<div class="countdown">⏰ T-12 Days: Anthropic Credit Split — June 15, 2026</div>
+
+<blockquote>
+"Subscription-based billing for AI has been commonplace. However, it's also been <strong>heavily subsidized to encourage adoption and obfuscate the financial costs of AI.</strong>"<br>
+— <strong>PCMag</strong>, June 3, 2026
+</blockquote>
+
+<p>That sentence, from a mainstream technology publication read by millions, marks a turning point. PCMag didn't report a price increase. PCMag reported that <strong>the pricing itself was a deception mechanism</strong>.</p>
+
+<p>This isn't a billing change. It's the unmasking of a pricing architecture designed to create dependency before extraction.</p>
+
+<h2>The Three-Phase Revelation</h2>
+
+<p>Coverage of AI billing changes has escalated through three distinct phases in just 72 hours:</p>
+
+<table class="data-table">
+<tr><th>Phase</th><th>Framing</th><th>Example</th></tr>
+<tr><td>Phase 1 (May 14)</td><td>"Billing change announced"</td><td>Anthropic announcement, neutral reporting</td></tr>
+<tr><td>Phase 2 (June 1-2)</td><td>"Developer backlash"</td><td>Ars Technica, The Register, user reports</td></tr>
+<tr class="tier0"><td>Phase 3 (June 3)</td><td>"Designed to obfuscate"</td><td>PCMag — adversarial, structural critique</td></tr>
+</table>
+
+<p>Each phase increases amplification. Phase 3 coverage doesn't just report costs — it questions intent.</p>
+
+<h2>The Numbers They Were Hiding</h2>
+
+<p>Now that token billing is live (GitHub Copilot switched June 1), the real costs are visible. And they're staggering:</p>
+
+<table class="data-table">
+<tr><th>Source</th><th>Before</th><th>After</th><th>Increase</th></tr>
+<tr><td>Reddit via PCMag</td><td>$39/mo</td><td>$1,799/mo</td><td><strong>46x</strong></td></tr>
+<tr><td>Analytics India Mag</td><td>$28/mo</td><td>$746/mo</td><td><strong>26x</strong></td></tr>
+<tr><td>DEV Community</td><td>$50/mo</td><td>$3,000/mo</td><td><strong>60x</strong></td></tr>
+</table>
+
+<p>These aren't predictions. These are real users checking GitHub's own calculator against their actual usage.</p>
+
+<h2>Day 1: The Credits Were Designed to Fail</h2>
+
+<p>Three independent users reported what happened when token billing went live on June 1:</p>
+
+<ul>
+<li><strong>"Over half my monthly credits in one day"</strong> — X user @wieslawsoltes</li>
+<li><strong>"Entire monthly token budget used up in less than half a workday"</strong> — @marcelaopimenta</li>
+<li><strong>"Over 70% of credits on day one"</strong> — @GregorGullwi</li>
+</ul>
+
+<p>The credits weren't priced for actual usage. They were priced to look reasonable on paper while failing within hours in practice. <strong>That's not a bug. That's the architecture.</strong></p>
+
+<h2>June 15: The Other Shoe Drops</h2>
+
+<p>While the Copilot backlash dominates headlines, Anthropic's credit split arrives in 12 days. DigitalApplied's comprehensive analysis confirms:</p>
+
+<ul>
+<li><strong>Enterprise Standard seats get $0 in Agent SDK credits</strong> — "the most underreported detail in current coverage"</li>
+<li><strong>Credits are per-user, not poolable</strong> — artificial scarcity across teams</li>
+<li><strong>No rollover</strong> — unused credits vanish monthly</li>
+<li><strong>Silent failure</strong> — when credits run out, "SDK requests simply fail until the next billing cycle"</li>
+<li><strong>Opt-in required</strong> — if you don't claim the credit, you get nothing</li>
+</ul>
+
+<p>The 15-30× subsidy that DigitalApplied documented is ending. What replaces it is a credit system designed to exhaust quickly, fail silently, and leave developers with no safety net.</p>
+
+<h2>The IPO Connection</h2>
+
+<p>PCMag's article ends with a telling line: <em>"How that affects all the big IPOs for these major companies just over the horizon remains to be seen."</em></p>
+
+<p>Anthropic filed a confidential S-1 on the same day as the Copilot billing switch. The IPO is projected at $965 billion. Revenue run rate: $47 billion (up from $9 billion six months ago — a 5× increase).</p>
+
+<p>The question isn't whether costs will keep rising. The question is whether you'll own your AI infrastructure before the next billing change.</p>
+
+<div class="alert">
+<strong>⏰ T-12 Days.</strong> On June 15, Anthropic separates Agent SDK billing. If you're running Claude in production, your costs change in 12 days. Not hypothetically — actually.
+</div>
+
+<h2>The Alternative: Own, Don't Rent</h2>
+
+<p>Every data point above validates one conclusion: AI subscription pricing is rental architecture. You pay for access, the landlord controls the terms, and the terms are designed to extract.</p>
+
+<p>The alternative isn't "find a cheaper subscription." The alternative is <strong>ownership</strong>:</p>
+
+<ul>
+<li><strong>Flat-rate pricing</strong> — pay once, use without meter-watching</li>
+<li><strong>Local-first models</strong> — your hardware, your compute, your data</li>
+<li><strong>Open-source tooling</strong> — no vendor can change the terms</li>
+<li><strong>Own your AI stack</strong> — the same way you own your code</li>
+</ul>
+
+<p>The subsidy era is ending. The extraction era is beginning. The question is simple: <strong>do you rent your AI, or do you own it?</strong></p>
+
+<div class="cta">
+<a href="https://www.skool.com/aiac-6489">🛡️ Learn How to Own Your AI — Join the Community →</a>
+</div>
+
+<h2>Sources</h2>
+<ul class="source" style="font-size:0.85rem;line-height:1.5">
+<li>PCMag: "GitHub Copilot Costs Skyrocket As Users Are Pushed to Per-Token Billing" (June 3, 2026)</li>
+<li>DigitalApplied: "Claude Credit Overhaul 2026: What Changes on June 15" (May 16, 2026)</li>
+<li>TechTimes: "Anthropic Ends Subscription Subsidy for Agents June 15" (June 2, 2026)</li>
+<li>DEV Community: "GitHub Copilot Token Billing 2026: Full Cost Guide" (June 3, 2026)</li>
+<li>gHacks: "GitHub Copilot Usage-Based Billing Takes Effect" (June 2, 2026)</li>
+<li>Ars Technica: "AI Costs How Much? GitHub Copilot Users React" (June 1, 2026)</li>
+</ul>
+
+<script data-goatcounter="https://frontierflatrate.gc.zgo.at/count" async src="//gc.zgo.at/count.js"></script>
+<section class="related-posts">
+<h3>Related Posts</h3>
+<ul>
+  <li><a href="/blog/the-student-who-proved-ai-billing-broken-june-2026.html">The $2 Student Who Proved AI Billing Is Broken</a> — A CS student burned through 200 Copilot credits in one morning — 10 to 20 requests. Whether you pay $2 or $100,000, rent</li>
+  <li><a href="/blog/the-24x-hidden-price-range-copilot-auto-mode-2026.html">The 24x Hidden Price Range</a> — Copilot Auto Mode picks the model — and the price. Same task can cost 24x more depending on which model is selected. You</li>
+  <li><a href="/blog/claude-opus-48-effort-tax.html">Claude Opus 4.8 and the Effort Tax: Why Your AI Vendor Controls How Hard Your AI Thinks</a> — Claude Opus 4.8 adds effort control — your vendor now decides how much thinking your AI does. Fast mode costs 3x less, p</li>
+  <li><a href="/blog/copilot-alternatives-2026.html">Copilot Alternatives in 2026: Flat-Rate AI Tools That Won't Surprise-Bill You</a> — GitHub Copilot token billing starts June 1, 2026. Compare 7 flat-rate AI coding alternatives — no tokens, no metering, n</li>
+  <li><a href="/blog/three-tiers-of-ai-access-mythos.html">The Three Tiers of AI Access: Own, Rent, and Mythos</a> — Anthropic's Claude Mythos (NSA, 150+ orgs, cyberweapon-grade) reveals the real three-tier model. Most developers are stuck in the middle: renting subsidized AI that can be repriced, throttled, or locked at any moment.</li>
+</ul>
+</section>
+</body>
+</html>
